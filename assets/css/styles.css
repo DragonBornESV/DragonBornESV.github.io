@@ -20,7 +20,7 @@ body {
 }
 
 /* =========================================
-   CARDS / FOOTER (your content area)
+   CARDS / FOOTER
    ========================================= */
 
 .card {
@@ -44,17 +44,15 @@ body {
   border-bottom: 1px solid #e2e8f0;
 }
 
-/* Centers the logo block */
 .logo-area {
   display: flex;
   justify-content: center;
   padding: 16px 0;
 }
 
-/* Prevents your logo from becoming huge */
 .logo {
-  height: 56px;   /* 🔧 LOGO SIZE: increase/decrease this */
-  width: auto;    /* keep aspect ratio */
+  height: 56px; /* 🔧 LOGO SIZE */
+  width: auto;
   display: block;
 }
 
@@ -65,75 +63,92 @@ body {
 .nav-bar {
   background: #0b84ff;
   display: flex;
-  padding-left: 16px;
+  padding-left: 0px;
+  isolation: isolate; /* keeps z-index predictable */
 }
 
 /* =========================================
-   NAV BUTTONS (tab base styling)
+   NAV BUTTONS (tabs)
    ========================================= */
 
 .nav-btn {
-  position: relative; /* required for hover spill pseudo-element */
-  z-index: 1;         /* keeps tab above its own spill */
+  position: relative;
+  display: inline-flex;
+  align-items: center;
 
   color: white;
   text-decoration: none;
   font-weight: 700;
 
   padding: 16px 28px;
+
+  /* base */
   background: #0b84ff;
 
-  transition: background 0.2s ease;
+  /* ✅ This is the key: big radius makes it feel like a cut from a large circle */
+  --tab-radius: 20px;        /* 🔧 try 140px–320px */
+  border-top-right-radius: var(--tab-radius);
+  border-bottom-right-radius: var(--tab-radius);
+
+  /* seam ring settings */
+  --seam-size: 120px;         /* 🔧 circle diameter */
+  --seam-thickness: 4px;      /* 🔧 ring thickness */
+
+  /* needed to clip seam ring slice */
+  /*overflow: hidden;
+
+  /* ✅ make sure text is above everything */
+  z-index: 2;
+}
+
+/* Hover: just change background (NO mask, no overlay => never hides text) */
+.nav-btn:hover {
+  background: #0868c9;
 }
 
 /* =========================================
-   TAB DIVIDER + CURVE CONTROLS
-   (this creates the "white curved cut")
+   STATIC OVERLAP BETWEEN TABS
    ========================================= */
 
 .nav-btn {
-  /* 🔧 WHITE EDGE THICKNESS (the curved white separator) */
-  border-right: 4px solid white;  /* increase for thicker white edge */
+  margin-left: -18px; /* 🔧 overlap amount */
+}
 
-  /* 🔧 CURVE SIZE (roundness of the right side) */
-  border-top-right-radius: 32px;   /* increase for more round */
-  border-bottom-right-radius: 32px;
+.nav-btn:first-child {
+  margin-left: 0;
 }
 
 /* =========================================
-   HOVER COLOR (tab darkens)
+   LAYERING RULE
+   Left tab sits above the one to its right
    ========================================= */
 
-.nav-btn:hover {
-  background: #0868c9; /* darker blue */
-}
+.nav-bar .nav-btn:nth-child(1) { z-index: 4; } /* Home */
+.nav-bar .nav-btn:nth-child(2) { z-index: 3; } /* Projects */
+.nav-bar .nav-btn:nth-child(3) { z-index: 2; } /* About */
+.nav-bar .nav-btn:nth-child(4) { z-index: 1; } /* Contact */
 
 /* =========================================
-   HOVER "SPILL" UNDER THE LEFT EDGE
-   (extends the highlight under the previous tab edge)
+   SEAM RING (white circle slice)
    ========================================= */
 
-.nav-btn:hover::before {
+.nav-btn::after {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
 
-  /* 🔧 SPILL SIZE:
-     left is negative (how far it reaches under the left neighbor)
-     width should match the absolute value of left
-  */
-  left: -14px;     /* increase magnitude for more spill */
-  width: 14px;
+  /* circle anchored to the right edge */
+  left: 100%;
+  top: 50%;
+  transform: translate(-100%, -50%);
 
-  background: #0868c9; /* same as hover */
-  z-index: -1;         /* IMPORTANT: behind the tab (won't cover left tab text) */
+  width: var(--seam-size);
+  height: var(--seam-size);
+
+  border: var(--seam-thickness) solid #fff;
+  border-radius: 50%;
+  pointer-events: none;
+
+  /* seam always on top */
+  z-index: 5;
 }
 
-/* =========================================
-   LAST TAB (Contact) - keep the white edge
-   ========================================= */
-
-.nav-btn:last-child {
-  border-right: 4px solid white; /* keep the white separator on the last tab too */
-}
