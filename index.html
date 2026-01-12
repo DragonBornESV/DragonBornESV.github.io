@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Martin Rasmussen | Portfolio</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+
+<body>
+  <header class="container">
+    <h1>Martin Rasmussen</h1>
+    <p class="subtitle">Portfolio website (work in progress)</p>
+
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/projects/">Projects</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Welcome 👋</h2>
+      <p>
+        This is my portfolio site. I’ll be adding projects, images, and details soon.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Featured projects (placeholder)</h2>
+      <ul>
+        <li>AR / Unity project</li>
+        <li>Hardware / Arduino project</li>
+        <li>3D / Blender work</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="year"></span> Martin Rasmussen</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
