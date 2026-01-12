@@ -31,22 +31,178 @@
   </header>
 
   <main class="container">
-    <section class="card">
-      <h2>Welcome 👋</h2>
-      <p>
-        This is my portfolio site. I’ll be adding projects, images, and details soon.
-      </p>
+    <!-- HERO -->
+    <section class="card hero">
+      <div class="hero-top">
+        <p class="hero-kicker">Game Dev • Hardware • AR • 3D</p>
+        <h1 class="hero-title">Hi, I’m Martin “Marty” Rasmussen.</h1>
+        <p class="hero-subtitle">
+          I build interactive experiences that blend <strong>software</strong> and <strong>physical systems</strong> —
+          from Unity prototypes and AR apps to Arduino-driven projects and 3D animation.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="/projects/">View projects</a>
+          <a class="btn ghost" href="/contact/">Contact</a>
+        </div>
+
+        <div class="hero-tags" aria-label="Quick facts">
+          <span class="tag">Unity / C#</span>
+          <span class="tag">AR Foundation</span>
+          <span class="tag">Arduino</span>
+          <span class="tag">3D Modeling</span>
+          <span class="tag">Blender</span>
+        </div>
+      </div>
     </section>
 
+    <!-- WHAT I DO -->
     <section class="card">
-      <h2>Featured projects (placeholder)</h2>
-      <ul>
-        <li>AR / Unity project</li>
-        <li>Hardware / Arduino project</li>
-        <li>3D / Blender work</li>
-      </ul>
+      <h2>What I do</h2>
+      <p class="muted">
+        I like projects where code meets the real world — gameplay systems, interactive UI/UX, sensors, and prototypes.
+      </p>
+
+      <div class="grid-2">
+        <div class="mini-card">
+          <h3>🎮 Game Development</h3>
+          <p>
+            Gameplay systems, UI, tools, and polished prototypes — usually in Unity (C#).
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>🕶️ AR / Interactive</h3>
+          <p>
+            Mobile AR projects with AR Foundation, focused on clear feedback and intuitive interactions.
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>🔧 Hardware & Prototyping</h3>
+          <p>
+            Arduino builds, motor control, sensors, and “game controllers in real life” type experiments.
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>🎨 3D & Visuals</h3>
+          <p>
+            Blender modeling, basic rig/animation workflows, and visuals that support interactive projects.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="card">
+      <h2>Featured projects</h2>
+      <p class="muted">
+        A few highlights (you can swap these placeholders for your best work).
+      </p>
+
+      <div class="projects">
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-thumb" aria-hidden="true"></div>
+          <div class="project-body">
+            <h3>Project Title #1 (placeholder)</h3>
+            <p class="muted">
+              One sentence: what it is + what’s interesting (e.g., “AR app teaching mass/volume/density with Unity + AR Foundation”).
+            </p>
+            <ul class="project-meta">
+              <li><strong>Role:</strong> Solo / Team</li>
+              <li><strong>Tech:</strong> Unity, C#, AR Foundation</li>
+            </ul>
+            <a class="link" href="/projects/">Read more →</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-thumb" aria-hidden="true"></div>
+          <div class="project-body">
+            <h3>Project Title #2 (placeholder)</h3>
+            <p class="muted">
+              One sentence: what it is + outcome (e.g., “Custom Arduino controller + Unity integration for steering/gear indicators”).
+            </p>
+            <ul class="project-meta">
+              <li><strong>Role:</strong> Solo / Team</li>
+              <li><strong>Tech:</strong> Arduino, Serial, Unity</li>
+            </ul>
+            <a class="link" href="/projects/">Read more →</a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="project-thumb" aria-hidden="true"></div>
+          <div class="project-body">
+            <h3>Project Title #3 (placeholder)</h3>
+            <p class="muted">
+              One sentence: what it is + what you learned (e.g., “Blender animation scene: modeling, lighting, NLA loops, final render”).
+            </p>
+            <ul class="project-meta">
+              <li><strong>Role:</strong> Solo</li>
+              <li><strong>Tech:</strong> Blender, 3D, Animation</li>
+            </ul>
+            <a class="link" href="/projects/">Read more →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT PREVIEW -->
+    <section class="card">
+      <h2>Quick intro</h2>
+      <p>
+        I’m a developer who enjoys building things that feel <strong>hands-on</strong> — whether that’s a game mechanic,
+        an AR prototype, or a piece of hardware that changes what the software can do.
+      </p>
+      <p class="muted">
+        If you want the longer version (background, education, tools I use), head to the About page.
+      </p>
+      <a class="btn ghost" href="/about/">More about me</a>
+    </section>
+
+    <!-- CURRENT FOCUS -->
+    <section class="card">
+      <h2>Current focus</h2>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h3>📌 What I’m exploring</h3>
+          <ul class="bullets">
+            <li>Polished portfolio projects with strong documentation</li>
+            <li>AR interactions that feel intuitive and “teachable”</li>
+            <li>Hardware + Unity links (controllers, feedback, sensors)</li>
+          </ul>
+        </div>
+
+        <div class="mini-card">
+          <h3>✅ What I care about</h3>
+          <ul class="bullets">
+            <li>Clear UX and feedback (users shouldn’t guess)</li>
+            <li>Systems that are simple, robust, and explainable</li>
+            <li>Finishing projects — not just starting them</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="card cta">
+      <h2>Want to collaborate or chat?</h2>
+      <p class="muted">
+        If you have a project idea, internship opportunity, or just want to talk game dev / hardware —
+        feel free to reach out.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="/contact/">Contact me</a>
+        <a class="btn ghost" href="/projects/">Browse projects</a>
+      </div>
     </section>
   </main>
+
 
   <footer class="container footer">
     <p>© <span id="year"></span> Martin Rasmussen</p>
