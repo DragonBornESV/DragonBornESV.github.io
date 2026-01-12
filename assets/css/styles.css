@@ -1,119 +1,54 @@
-:root {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height: 1.5;
-}
+/* ============================
+   NAVIGATION BAR
+   ============================ */
 
-body {
-  margin: 0;
-  background: #ffffff;
-  color: #0f172a;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 24px;
-}
-
-.subtitle {
-  margin-top: 6px;
-  color: #475569;
-}
-
-.nav {
-  display: flex;
-  gap: 14px;
-  margin-top: 14px;
-  flex-wrap: wrap;
-}
-
-.nav a {
-  color: #0f172a;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-
-.nav a:hover {
-  border-bottom-color: #0f172a;
-}
-
-.card {
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  padding: 18px;
-  margin-top: 16px;
-  background: #fff;
-}
-
-.footer {
-  color: #64748b;
-  padding-bottom: 48px;
-}
-
-.site-header {
-  border-bottom: 1px solid #e2e8f0;
-}
-
-.logo-area {
-  display: flex;
-  justify-content: center;
-  padding: 16px 0;
-}
-
-.logo {
-  height: 56px;     /* tweak later */
-  width: auto;
-  display: block;
-}
-
-.nav-bar {
-  background: #0b84ff;   /* bright blue like your mockup */
-  display: flex;
-  gap: 18px;
-  padding: 10px 18px;
-}
-
-/* Make the links look like buttons (we’ll do the rounded “slide” shape in Step 3) */
-.nav-btn {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 10px 14px;
-  display: inline-block;
-}
-
-/* Step 3: Tab-style nav buttons with rounded right side */
 .nav-bar {
   background: #0b84ff;
   display: flex;
-  gap: 0;                 /* no gap: we’ll use borders to separate tabs */
-  padding: 0 16px;        /* some left/right breathing room */
+  padding-left: 16px;
 }
 
-/* Each link becomes a “tab” */
+/* ----------------------------
+   NAV BUTTON (TAB)
+   ---------------------------- */
 .nav-btn {
+  position: relative;          /* Needed for overlap tricks */
+  z-index: 1;
+
   color: white;
   text-decoration: none;
   font-weight: 700;
-  padding: 14px 22px;
-  display: inline-block;
 
-  /* Tab look */
-  background: #0b84ff;               /* same as bar so it blends */
-  border-right: 2px solid #ffffff;   /* divider line between tabs */
+  padding: 16px 28px;
 
-  /* Rounded only on the right side */
-  border-top-right-radius: 22px;
-  border-bottom-right-radius: 22px;
+  background: #0b84ff;
+
+  /* 🔧 WHITE EDGE THICKNESS */
+  border-right: 4px solid white;   /* ⬅️ increase/decrease this */
+
+  /* 🔧 CURVE SIZE (ROUNDNESS) */
+  border-top-right-radius: 32px;   /* ⬅️ tweak these */
+  border-bottom-right-radius: 32px;
+
+  transition: background 0.2s ease;
 }
 
-/* Remove the divider after the last tab */
-.nav-btn:last-child {
-  border-right: none;
-}
-
-/* Hover so it feels clickable */
+/* ----------------------------
+   HOVER / ACTIVE EFFECT
+   ---------------------------- */
 .nav-btn:hover {
-  background: #0a74df;
+  background: #0868c9;     /* darker blue */
+
+  /* 🔧 OVERLAP LEFT (spill effect) */
+  margin-left: -12px;      /* ⬅️ how much it covers previous tab */
+  padding-left: 40px;      /* compensate text shift */
+
+  z-index: 2;              /* ensure it sits above neighbor */
 }
 
+/* ----------------------------
+   LAST BUTTON FIX (Contact)
+   ---------------------------- */
+.nav-btn:last-child {
+  border-right: 4px solid white;   /* keep white edge */
+}
