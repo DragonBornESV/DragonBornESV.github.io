@@ -81,3 +81,39 @@ body {
   padding: 10px 14px;
   display: inline-block;
 }
+
+/* Step 3: Tab-style nav buttons with rounded right side */
+.nav-bar {
+  background: #0b84ff;
+  display: flex;
+  gap: 0;                 /* no gap: we’ll use borders to separate tabs */
+  padding: 0 16px;        /* some left/right breathing room */
+}
+
+/* Each link becomes a “tab” */
+.nav-btn {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 14px 22px;
+  display: inline-block;
+
+  /* Tab look */
+  background: #0b84ff;               /* same as bar so it blends */
+  border-right: 2px solid #ffffff;   /* divider line between tabs */
+
+  /* Rounded only on the right side */
+  border-top-right-radius: 22px;
+  border-bottom-right-radius: 22px;
+}
+
+/* Remove the divider after the last tab */
+.nav-btn:last-child {
+  border-right: none;
+}
+
+/* Hover so it feels clickable */
+.nav-btn:hover {
+  background: #0a74df;
+}
+
