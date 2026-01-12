@@ -2,13 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Page title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marty Rasmussen | Contact</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
+
 <body>
+  <!-- Keep EXACT same mask -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <mask id="tab-cut-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="60">
+        <rect x="0" y="0" width="200" height="60" fill="black"></rect>
+        <circle cx="40" cy="30" r="60" fill="white"></circle>
+      </mask>
+    </defs>
+  </svg>
+
+  <!-- Header / Nav (unchanged) -->
+  <header class="site-header">
+    <div class="logo-area">
+      <img class="logo" src="/assets/img/logo.png" alt="Marty Rasmussen logo" />
+    </div>
+
+    <nav class="nav-bar">
+      <a class="nav-btn" href="/">Home</a>
+      <a class="nav-btn" href="/projects/">Projects</a>
+      <a class="nav-btn" href="/about/">About</a>
+      <a class="nav-btn" href="/contact/">Contact</a>
+    </nav>
+  </header>
+
   <main class="container">
-    <h1>Page title</h1>
-    <p>Content coming soon.</p>
+    <!-- PAGE HERO -->
+    <section class="card hero">
+      <p class="hero-kicker">Get in touch</p>
+      <h1 class="hero-title">Contact</h1>
+      <p class="hero-subtitle">
+        If you want to talk about a project, an internship/job opportunity, or anything related to
+        game dev, AR/VR, or hardware prototyping — feel free to reach out.
+      </p>
+
+      <div class="hero-actions">
+        <!-- Replace with your real email -->
+        <a class="btn primary" href="mailto:YOUR_EMAIL_HERE">Email me</a>
+        <!-- Optional: link to projects -->
+        <a class="btn ghost" href="/projects/">View projects</a>
+      </div>
+    </section>
+
+    <!-- CONTACT OPTIONS -->
+    <section class="card">
+      <h2>Contact options</h2>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h3>📧 Email</h3>
+          <p class="muted">Best for job opportunities and longer messages.</p>
+          <p>
+            <a class="link" href="mailto:YOUR_EMAIL_HERE">YOUR_EMAIL_HERE</a>
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>💼 LinkedIn</h3>
+          <p class="muted">Best if you want a quick overview + messaging.</p>
+          <p>
+            <a class="link" href="YOUR_LINKEDIN_URL_HERE" target="_blank" rel="noopener">Open LinkedIn →</a>
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>🐙 GitHub</h3>
+          <p class="muted">Repositories, code samples, and prototypes.</p>
+          <p>
+            <a class="link" href="YOUR_GITHUB_URL_HERE" target="_blank" rel="noopener">Open GitHub →</a>
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>📄 CV</h3>
+          <p class="muted">Optional: add a PDF link when you’re ready.</p>
+          <p class="muted">
+            Add later: <code>/assets/files/Marty_Rasmussen_CV.pdf</code>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHORT NOTE -->
+    <section class="card">
+      <h2>What to include</h2>
+      <ul class="bullets">
+        <li>What you’re reaching out about (job/internship, collaboration, question, etc.)</li>
+        <li>Any relevant links (company page, project brief, GitHub, etc.)</li>
+        <li>Timeline (if there is one)</li>
+      </ul>
+      <p class="muted">
+        I usually respond within a couple of days.
+      </p>
+    </section>
   </main>
+
+  <!-- Footer (unchanged) -->
+  <footer class="container footer">
+    <p>© <span id="year"></span> Martin Rasmussen</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

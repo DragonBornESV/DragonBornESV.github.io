@@ -2,13 +2,238 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Page title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marty Rasmussen | Projects</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
+
 <body>
+  <!-- Keep this EXACTLY the same across pages (your nav mask) -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <mask id="tab-cut-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="60">
+        <rect x="0" y="0" width="200" height="60" fill="black"></rect>
+        <circle cx="40" cy="30" r="60" fill="white"></circle>
+      </mask>
+    </defs>
+  </svg>
+
+  <!-- Keep header/nav the same -->
+  <header class="site-header">
+    <div class="logo-area">
+      <img class="logo" src="/assets/img/logo.png" alt="Marty Rasmussen logo" />
+    </div>
+
+    <nav class="nav-bar">
+      <a class="nav-btn" href="/">Home</a>
+      <a class="nav-btn" href="/projects/">Projects</a>
+      <a class="nav-btn" href="/about/">About</a>
+      <a class="nav-btn" href="/contact/">Contact</a>
+    </nav>
+  </header>
+
   <main class="container">
-    <h1>Page title</h1>
-    <p>Content coming soon.</p>
+    <!-- PAGE HERO -->
+    <section class="card hero">
+      <p class="hero-kicker">Selected work • Prototypes • Finished projects</p>
+      <h1 class="hero-title">Projects</h1>
+      <p class="hero-subtitle">
+        A collection of my work across <strong>game development</strong>, <strong>AR/VR</strong>, and
+        <strong>hardware prototyping</strong>. Each project includes what I built, what I learned,
+        and the tools/tech involved.
+      </p>
+
+      <div class="hero-tags" aria-label="Quick filters">
+        <span class="tag">Unity / C#</span>
+        <span class="tag">AR & VR</span>
+        <span class="tag">Arduino</span>
+        <span class="tag">3D Modeling</span>
+        <span class="tag">3D Printing</span>
+      </div>
+    </section>
+
+    <!-- SEARCH + FILTERS (visual only for now, no JS required) -->
+    <section class="card">
+      <h2>Find a project</h2>
+      <p class="muted">
+        You can keep this simple (just a list), or later we can add real filtering.
+      </p>
+
+      <div class="project-controls">
+        <label class="sr-only" for="project-search">Search</label>
+        <input
+          id="project-search"
+          class="input"
+          type="search"
+          placeholder="Search (e.g., AR, Unity, Arduino, VR...)"
+          autocomplete="off"
+        />
+
+        <div class="filter-row" aria-label="Project categories">
+          <span class="chip">All</span>
+          <span class="chip">Game Dev</span>
+          <span class="chip">AR</span>
+          <span class="chip">VR</span>
+          <span class="chip">Hardware</span>
+          <span class="chip">3D / Printing</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED / PRIMARY PROJECTS -->
+    <section class="card">
+      <h2>Highlighted projects</h2>
+      <p class="muted">
+        These are your “showcase” projects. We’ll replace the placeholder text with real details and images.
+      </p>
+
+      <div class="projects-grid">
+        <!-- Project: AR density app -->
+        <article class="project-tile">
+          <div class="project-thumb" aria-hidden="true"></div>
+          <div class="project-body">
+            <h3 class="project-title">AR Density Learning App (Mobile)</h3>
+            <p class="muted">
+              Mobile AR app that visualizes materials by density and volume — built for learning and exploration.
+            </p>
+
+            <div class="project-tags">
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">AR Foundation</span>
+              <span class="tag">Mobile</span>
+            </div>
+
+            <ul class="project-meta">
+              <li><strong>Role:</strong> Solo / Team</li>
+              <li><strong>Year:</strong> 2025–2026</li>
+              <li><strong>Focus:</strong> AR UX, interaction, data-driven scaling</li>
+            </ul>
+
+            <div class="project-links">
+              <a class="link" href="#">Case study →</a>
+              <span class="dot">•</span>
+              <a class="link" href="#">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project: VR organs -->
+        <article class="project-tile">
+          <div class="project-thumb" aria-hidden="true"></div>
+          <div class="project-body">
+            <h3 class="project-title">VR Organs Explorer (Medical Visualization)</h3>
+            <p class="muted">
+              VR experience for exploring 3D anatomy models — focused on clarity, scale, and spatial learning.
+            </p>
+
+            <div class="project-tags">
+              <span class="tag">Unity</span>
+              <span class="tag">VR</span>
+              <span class="tag">3D Assets</span>
+              <span class="tag">UX</span>
+            </div>
+
+            <ul class="project-meta">
+              <li><strong>Role:</strong> Solo / Team</li>
+              <li><strong>Year:</strong> 2024–2025</li>
+              <li><strong>Focus:</strong> VR interaction, comfort, navigation</li>
+            </ul>
+
+            <div class="project-links">
+              <a class="link" href="#">Case study →</a>
+              <span class="dot">•</span>
+              <a class="link" href="#">Video →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project: omnidirectional robot -->
+        <article class="project-tile">
+          <div class="project-thumb" aria-hidden="true"></div>
+          <div class="project-body">
+            <h3 class="project-title">Omnidirectional Robot (Hardware + Control)</h3>
+            <p class="muted">
+              Hardware build with movement control + experimentation — includes prototyping, testing, and iteration.
+            </p>
+
+            <div class="project-tags">
+              <span class="tag">Hardware</span>
+              <span class="tag">Arduino</span>
+              <span class="tag">Robotics</span>
+              <span class="tag">3D Printing</span>
+            </div>
+
+            <ul class="project-meta">
+              <li><strong>Role:</strong> Solo / Team</li>
+              <li><strong>Year:</strong> 2025</li>
+              <li><strong>Focus:</strong> Control logic, mechanical iteration, wiring</li>
+            </ul>
+
+            <div class="project-links">
+              <a class="link" href="#">Case study →</a>
+              <span class="dot">•</span>
+              <a class="link" href="#">Photos →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECT ARCHIVE -->
+    <section class="card">
+      <h2>Project archive</h2>
+      <p class="muted">
+        Smaller builds, experiments, and coursework projects. Add as many as you want.
+      </p>
+
+      <div class="archive">
+        <article class="archive-item">
+          <h3>Unity FPS Prototype</h3>
+          <p class="muted">Gameplay systems, shooting feel, impact effects, and iteration.</p>
+          <div class="project-tags">
+            <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Game Dev</span>
+          </div>
+        </article>
+
+        <article class="archive-item">
+          <h3>Arduino Racing Wheel + LEDs</h3>
+          <p class="muted">Servo feedback steering + gear switches + rev LED indicator integration.</p>
+          <div class="project-tags">
+            <span class="tag">Arduino</span><span class="tag">Hardware</span><span class="tag">Unity</span>
+          </div>
+        </article>
+
+        <article class="archive-item">
+          <h3>3D Print Utility Parts</h3>
+          <p class="muted">Functional modeling for real-world use (Fusion/Inventor workflow).</p>
+          <div class="project-tags">
+            <span class="tag">3D Modeling</span><span class="tag">3D Printing</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="card cta">
+      <h2>Want details on a specific project?</h2>
+      <p class="muted">
+        If you’re reviewing this with my CV, feel free to ask for a walkthrough of any project.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="/contact/">Contact</a>
+        <a class="btn ghost" href="/about/">About me</a>
+      </div>
+    </section>
   </main>
+
+  <!-- Keep footer the same -->
+  <footer class="container footer">
+    <p>© <span id="year"></span> Martin Rasmussen</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

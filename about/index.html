@@ -2,13 +2,190 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Page title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marty Rasmussen | About</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
+
 <body>
+  <!-- Keep EXACT same mask -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <mask id="tab-cut-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="60">
+        <rect x="0" y="0" width="200" height="60" fill="black"></rect>
+        <circle cx="40" cy="30" r="60" fill="white"></circle>
+      </mask>
+    </defs>
+  </svg>
+
+  <!-- Header / Nav (unchanged) -->
+  <header class="site-header">
+    <div class="logo-area">
+      <img class="logo" src="/assets/img/logo.png" alt="Marty Rasmussen logo" />
+    </div>
+
+    <nav class="nav-bar">
+      <a class="nav-btn" href="/">Home</a>
+      <a class="nav-btn" href="/projects/">Projects</a>
+      <a class="nav-btn" href="/about/">About</a>
+      <a class="nav-btn" href="/contact/">Contact</a>
+    </nav>
+  </header>
+
   <main class="container">
-    <h1>Page title</h1>
-    <p>Content coming soon.</p>
+    <!-- PAGE HERO -->
+    <section class="card hero">
+      <p class="hero-kicker">Background • Skills • How I work</p>
+      <h1 class="hero-title">About me</h1>
+      <p class="hero-subtitle">
+        I’m Martin “Marty” Rasmussen — a hands-on developer with experience across
+        <strong>game development, AR/VR, and hardware prototyping</strong>.
+        This page gives a bit more context on my background, skills, and how I approach projects.
+      </p>
+    </section>
+
+    <!-- BACKGROUND -->
+    <section class="card">
+      <h2>Background</h2>
+      <p>
+        I’m currently finishing a bachelor’s degree in
+        <strong>Game Development and Learning Technology</strong>.
+        My studies have given me experience across software development,
+        interactive systems, and physical computing — with a strong focus on building
+        things that actually work in practice.
+      </p>
+      <p>
+        While my academic path has involved a broad range of topics,
+        my main motivation has always been the same:
+        <strong>building interactive systems</strong> —
+        whether that’s a game mechanic, an AR prototype, or a hardware-driven experiment.
+      </p>
+    </section>
+
+    <!-- HOW I WORK -->
+    <section class="card">
+      <h2>How I work</h2>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h3>Hands-on & practical</h3>
+          <p>
+            I learn best by building. Most of my projects start as prototypes
+            that I iterate on until the system feels solid, understandable,
+            and usable.
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>Broad but focused</h3>
+          <p>
+            I’m not a specialist in a single narrow field.
+            Instead, I’m comfortable working across software, hardware,
+            and different platforms — and learning what’s needed for the task.
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>Systems thinking</h3>
+          <p>
+            I enjoy understanding how things fit together:
+            game systems, data flow, hardware signals,
+            and how changes in one part affect the rest.
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>Finishable projects</h3>
+          <p>
+            I care about taking projects far enough that they can be
+            shown, tested, explained, and reused —
+            not just started and abandoned.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="card">
+      <h2>Skills & tools</h2>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h3>Game Development</h3>
+          <ul class="bullets">
+            <li>Unity (C#)</li>
+            <li>Gameplay systems & mechanics</li>
+            <li>UI, feedback, and polish</li>
+            <li>PC, VR, and AR projects</li>
+          </ul>
+        </div>
+
+        <div class="mini-card">
+          <h3>AR / VR</h3>
+          <ul class="bullets">
+            <li>AR Foundation (mobile AR)</li>
+            <li>VR interaction & navigation</li>
+            <li>Learning & visualization tools</li>
+            <li>Spatial reasoning & scale</li>
+          </ul>
+        </div>
+
+        <div class="mini-card">
+          <h3>Hardware & Prototyping</h3>
+          <ul class="bullets">
+            <li>Arduino (multiple university courses)</li>
+            <li>Sensors, motors, LEDs, controllers</li>
+            <li>Serial communication with Unity</li>
+            <li>Hands-on debugging & testing</li>
+          </ul>
+        </div>
+
+        <div class="mini-card">
+          <h3>3D & Fabrication</h3>
+          <ul class="bullets">
+            <li>Fusion / Inventor (primary)</li>
+            <li>3D modeling for real-world use</li>
+            <li>3D printing workflows</li>
+            <li>Basic Blender when needed</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT I'M LOOKING FOR -->
+    <section class="card">
+      <h2>What I’m looking for</h2>
+      <p>
+        I’m interested in roles where I can work with
+        <strong>interactive systems</strong> —
+        especially game development, AR/VR, and projects that combine
+        software with physical or spatial components.
+      </p>
+      <p class="muted">
+        I’m particularly motivated by environments where learning,
+        experimentation, and practical problem-solving are valued.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="card cta">
+      <h2>Want to know more?</h2>
+      <p class="muted">
+        If you’re reviewing this as part of a job application,
+        feel free to reach out or ask about specific projects or skills.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="/contact/">Contact me</a>
+        <a class="btn ghost" href="/projects/">View projects</a>
+      </div>
+    </section>
   </main>
+
+  <!-- Footer (unchanged) -->
+  <footer class="container footer">
+    <p>© <span id="year"></span> Martin Rasmussen</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
