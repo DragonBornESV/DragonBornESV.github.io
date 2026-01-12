@@ -49,3 +49,19 @@ body {
   color: #64748b;
   padding-bottom: 48px;
 }
+
+.site-header {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.logo-area {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.logo {
+  height: 56px;     /* tweak later */
+  width: auto;
+  display: block;
+}
