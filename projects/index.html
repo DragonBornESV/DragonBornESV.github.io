@@ -52,11 +52,11 @@
       </div>
     </section>
 
-    <!-- SEARCH + FILTERS (visual only for now, no JS required) -->
+    <!-- SEARCH + FILTERS -->
     <section class="card">
       <h2>Find a project</h2>
       <p class="muted">
-        You can keep this simple (just a list), or later we can add real filtering.
+        Search by keywords (Unity, AR, VR, Arduino…) or use the category buttons to filter the list.
       </p>
 
       <div class="project-controls">
@@ -70,12 +70,12 @@
         />
 
         <div class="filter-row" aria-label="Project categories">
-          <span class="chip">All</span>
-          <span class="chip">Game Dev</span>
-          <span class="chip">AR</span>
-          <span class="chip">VR</span>
-          <span class="chip">Hardware</span>
-          <span class="chip">3D / Printing</span>
+          <button class="chip is-active" type="button" data-filter="all">All</button>
+          <button class="chip" type="button" data-filter="game">Game Dev</button>
+          <button class="chip" type="button" data-filter="ar">AR</button>
+          <button class="chip" type="button" data-filter="vr">VR</button>
+          <button class="chip" type="button" data-filter="hardware">Hardware</button>
+          <button class="chip" type="button" data-filter="3d">3D / Printing</button>
         </div>
       </div>
     </section>
@@ -84,99 +84,324 @@
     <section class="card">
       <h2>Highlighted projects</h2>
       <p class="muted">
-        These are your “showcase” projects. We’ll replace the placeholder text with real details and images.
+        These projects represent my most substantial work — including course projects and my bachelor project.
+        Each one shows how I design, implement, iterate, and reflect across game dev, AR/VR, and hardware systems.
       </p>
 
       <div class="projects-grid">
-        <!-- Project: AR density app -->
-        <article class="project-tile">
-          <div class="project-thumb" aria-hidden="true"></div>
+
+        <!-- Project: AR Density Learning App (Bachelor / full version) -->
+        <article class="project-tile" data-tags="ar game unity">
+          <div class="project-thumb carousel">
+            <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
+
+            <div class="carousel-track">
+              <img src="/assets/img/projects/ar-density-ba-1.jpg" alt="Bachelor AR Density app: tracked marker with scaled material cube" class="carousel-img is-active">
+              <img src="/assets/img/projects/ar-density-ba-2.jpg" alt="Bachelor AR Density app: material selection and info UI" class="carousel-img">
+              <img src="/assets/img/projects/ar-density-ba-3.jpg" alt="Bachelor AR Density app: comparing materials / density-to-volume effect" class="carousel-img">
+            </div>
+
+            <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
+          </div>
+
           <div class="project-body">
-            <h3 class="project-title">AR Density Learning App (Mobile)</h3>
+            <h3 class="project-title">AR Density Learning App (Bachelor Project)</h3>
+
             <p class="muted">
-              Mobile AR app that visualizes materials by density and volume — built for learning and exploration.
+              A mobile AR learning application that helps students understand the relationship between
+              <strong>mass, volume, and density</strong> by visualizing materials as a scaled 3D object in the real world.
+              Built in Unity with AR Foundation and developed through iterative testing and refinement.
             </p>
 
             <div class="project-tags">
               <span class="tag">Unity</span>
               <span class="tag">C#</span>
               <span class="tag">AR Foundation</span>
-              <span class="tag">Mobile</span>
+              <span class="tag">Mobile AR</span>
+              <span class="tag">Learning</span>
+              <span class="tag">User Testing</span>
             </div>
 
             <ul class="project-meta">
-              <li><strong>Role:</strong> Solo / Team</li>
+              <li><strong>Role:</strong> Solo (Bachelor project)</li>
               <li><strong>Year:</strong> 2025–2026</li>
-              <li><strong>Focus:</strong> AR UX, interaction, data-driven scaling</li>
+              <li><strong>Focus:</strong> Density→volume scaling, tracking robustness, iterative design & testing</li>
             </ul>
 
             <div class="project-links">
-              <a class="link" href="#">Case study →</a>
+              <a class="link" href="#" aria-disabled="true">Project details →</a>
               <span class="dot">•</span>
-              <a class="link" href="#">GitHub →</a>
+              <a class="link" href="#" aria-disabled="true">Video →</a>
             </div>
           </div>
         </article>
 
-        <!-- Project: VR organs -->
-        <article class="project-tile">
-          <div class="project-thumb" aria-hidden="true"></div>
+        <!-- Project: AR Density Learning App (course version) -->
+        <article class="project-tile" data-tags="ar game unity">
+          <div class="project-thumb carousel">
+            <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
+
+            <div class="carousel-track">
+              <img src="/assets/img/projects/ar-density-1.jpg" alt="AR Density app: cube overlay on tracked milk carton" class="carousel-img is-active">
+              <img src="/assets/img/projects/ar-density-2.jpg" alt="AR Density app: material selection menu" class="carousel-img">
+              <img src="/assets/img/projects/ar-density-3.jpg" alt="AR Density app: different material cube size comparison" class="carousel-img">
+            </div>
+
+            <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
+          </div>
+
           <div class="project-body">
-            <h3 class="project-title">VR Organs Explorer (Medical Visualization)</h3>
+            <h3 class="project-title">AR Density Learning App (Mobile)</h3>
+
             <p class="muted">
-              VR experience for exploring 3D anatomy models — focused on clarity, scale, and spatial learning.
+              Mobile AR learning tool that visualizes how <strong>the same mass</strong> can have
+              <strong>different volumes</strong> depending on material density — by placing a resizable,
+              textured cube on a tracked real-world object.
             </p>
 
             <div class="project-tags">
               <span class="tag">Unity</span>
-              <span class="tag">VR</span>
-              <span class="tag">3D Assets</span>
-              <span class="tag">UX</span>
+              <span class="tag">C#</span>
+              <span class="tag">AR Foundation</span>
+              <span class="tag">Image Tracking</span>
+              <span class="tag">Mobile</span>
             </div>
 
             <ul class="project-meta">
-              <li><strong>Role:</strong> Solo / Team</li>
-              <li><strong>Year:</strong> 2024–2025</li>
-              <li><strong>Focus:</strong> VR interaction, comfort, navigation</li>
+              <li><strong>Role:</strong> Two-person team (AR course)</li>
+              <li><strong>Year:</strong> 2024</li>
+              <li><strong>Focus:</strong> AR tracking, UI material menu, density→volume scaling</li>
             </ul>
 
             <div class="project-links">
-              <a class="link" href="#">Case study →</a>
+              <a class="link" href="/projects/ar-density-learning-app/">Project details →</a>
               <span class="dot">•</span>
-              <a class="link" href="#">Video →</a>
+              <a class="link" href="/assets/video/Screen_Recording_20240815_152525_AR_Density.mp4">Video →</a>
             </div>
           </div>
         </article>
 
-        <!-- Project: omnidirectional robot -->
-        <article class="project-tile">
-          <div class="project-thumb" aria-hidden="true"></div>
+        <!-- Project: VR Organ Explorer -->
+        <article class="project-tile" data-tags="vr unity">
+          <div class="project-thumb carousel">
+            <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
+
+            <div class="carousel-track">
+              <img src="/assets/img/projects/vr-organs-1.jpg" alt="VR organ interaction scene" class="carousel-img is-active">
+              <img src="/assets/img/projects/vr-organs-2.jpg" alt="Organ selection menu in VR" class="carousel-img">
+              <img src="/assets/img/projects/vr-organs-3.jpg" alt="Anatomy information panel in VR" class="carousel-img">
+            </div>
+
+            <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
+          </div>
+
           <div class="project-body">
-            <h3 class="project-title">Omnidirectional Robot (Hardware + Control)</h3>
+            <h3 class="project-title">VR Organs Explorer (Medical Visualization)</h3>
+
             <p class="muted">
-              Hardware build with movement control + experimentation — includes prototyping, testing, and iteration.
+              Educational VR application designed to help medical students explore human anatomy
+              through interactive 3D organ models in an immersive, low-stress learning environment.
             </p>
 
             <div class="project-tags">
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">VR</span>
+              <span class="tag">Medical</span>
+              <span class="tag">Oculus Quest</span>
+            </div>
+
+            <ul class="project-meta">
+              <li><strong>Role:</strong> Two-person team</li>
+              <li><strong>Year:</strong> 2024</li>
+              <li><strong>Focus:</strong> Immersive learning, anatomy visualization, interaction</li>
+            </ul>
+
+            <div class="project-links">
+              <a class="link" href="#" aria-disabled="true">Project details →</a>
+              <span class="dot">•</span>
+              <a class="link" href="#" aria-disabled="true">Video →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project: Poltergeist Pursuers -->
+        <article class="project-tile" data-tags="ar game hardware unity 3d">
+          <div class="project-thumb carousel">
+            <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
+
+            <div class="carousel-track">
+              <img src="/assets/img/projects/poltergeist-1.jpg" alt="Poltergeist Pursuers AR gameplay" class="carousel-img is-active">
+              <img src="/assets/img/projects/poltergeist-2.jpg" alt="3D-printed AR controller prototype" class="carousel-img">
+              <img src="/assets/img/projects/poltergeist-3.jpg" alt="Controller sketch and UI concepts" class="carousel-img">
+            </div>
+
+            <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
+          </div>
+
+          <div class="project-body">
+            <h3 class="project-title">Poltergeist Pursuers (AR Game + Custom Controller)</h3>
+
+            <p class="muted">
+              Mobile AR game prototype focused on physical movement and immersion,
+              using a custom-built controller to detect and capture ghosts in the real world.
+            </p>
+
+            <div class="project-tags">
+              <span class="tag">Unity</span>
+              <span class="tag">AR</span>
               <span class="tag">Hardware</span>
               <span class="tag">Arduino</span>
-              <span class="tag">Robotics</span>
               <span class="tag">3D Printing</span>
             </div>
 
             <ul class="project-meta">
-              <li><strong>Role:</strong> Solo / Team</li>
-              <li><strong>Year:</strong> 2025</li>
-              <li><strong>Focus:</strong> Control logic, mechanical iteration, wiring</li>
+              <li><strong>Role:</strong> Two-person team</li>
+              <li><strong>Year:</strong> 2024</li>
+              <li><strong>Focus:</strong> AR gameplay, physical interaction, custom input device</li>
             </ul>
 
             <div class="project-links">
-              <a class="link" href="#">Case study →</a>
+              <a class="link" href="#" aria-disabled="true">Project details →</a>
               <span class="dot">•</span>
-              <a class="link" href="#">Photos →</a>
+              <a class="link" href="#" aria-disabled="true">Video →</a>
             </div>
           </div>
         </article>
+
+        <!-- Project: Racing wheel -->
+        <article class="project-tile" data-tags="hardware game unity">
+          <div class="project-thumb carousel">
+            <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
+
+            <div class="carousel-track">
+              <img src="/assets/img/projects/racing-wheel-1.jpg" alt="Racing wheel prototype with LED rev strip" class="carousel-img is-active">
+              <img src="/assets/img/projects/racing-wheel-2.jpg" alt="Arduino + wiring / breadboard setup for the racing wheel system" class="carousel-img">
+              <img src="/assets/img/projects/racing-wheel-3.jpg" alt="Unity UI showing wheel angle, gear, revs, and speed" class="carousel-img">
+            </div>
+
+            <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
+          </div>
+
+          <div class="project-body">
+            <h3 class="project-title">Interactive Racing Wheel System (Arduino + Unity)</h3>
+
+            <p class="muted">
+              Arduino-based racing wheel prototype with steering input (servo feedback), paddle-shift microswitches,
+              and an LED “rev” strip — connected to Unity for live wheel angle, gear, revs, and speed display.
+            </p>
+
+            <div class="project-tags">
+              <span class="tag">Arduino</span>
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">Serial</span>
+              <span class="tag">LEDs</span>
+            </div>
+
+            <ul class="project-meta">
+              <li><strong>Role:</strong> Solo</li>
+              <li><strong>Year:</strong> 2024</li>
+              <li><strong>Focus:</strong> Hardware↔Unity integration, real-time feedback</li>
+            </ul>
+
+            <div class="project-links">
+              <a class="link" href="#" aria-disabled="true">Project details →</a>
+              <span class="dot">•</span>
+              <a class="link" href="#" aria-disabled="true">Video →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project: Omnidirectional robot -->
+        <article class="project-tile" data-tags="hardware 3d">
+          <div class="project-thumb carousel">
+            <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
+
+            <div class="carousel-track">
+              <img src="/assets/img/projects/mecanum-robot-1.jpg" alt="Omnidirectional robot with mecanum wheels (front view)" class="carousel-img is-active">
+              <img src="/assets/img/projects/mecanum-robot-2.jpg" alt="Omnidirectional robot with OLED eyes display (close view)" class="carousel-img">
+              <img src="/assets/img/projects/mecanum-robot-3.jpg" alt="Omnidirectional robot (side/top view)" class="carousel-img">
+            </div>
+
+            <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
+          </div>
+
+          <div class="project-body">
+            <h3 class="project-title">Wi-Fi-Controlled Omnidirectional Robot (Mecanum Wheels)</h3>
+
+            <p class="muted">
+              A 3D-printed mecanum-wheel robot controlled from a browser over Wi-Fi (phone hotspot),
+              with an OLED “eyes” display that reacts to movement commands.
+            </p>
+
+            <div class="project-tags">
+              <span class="tag">Arduino Uno R4 WiFi</span>
+              <span class="tag">Wi-Fi / HTTP</span>
+              <span class="tag">Robotics</span>
+              <span class="tag">3D Printing</span>
+              <span class="tag">Fusion 360</span>
+            </div>
+
+            <ul class="project-meta">
+              <li><strong>Role:</strong> Two-person team</li>
+              <li><strong>Year:</strong> 2025</li>
+              <li><strong>Focus:</strong> Wireless control, mecanum mapping, chassis iteration, OLED feedback</li>
+            </ul>
+
+            <div class="project-links">
+              <a class="link" href="#" aria-disabled="true">Project details →</a>
+              <span class="dot">•</span>
+              <a class="link" href="https://www.youtube.com/watch?v=SpRy7mJUIzA" target="_blank" rel="noopener">Video →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project: Library Of Alexandria -->
+        <article class="project-tile" data-tags="game unity">
+          <div class="project-thumb carousel">
+            <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
+
+            <div class="carousel-track">
+              <img src="/assets/img/projects/library-alexandria-1.jpg" alt="The Library of Alexandria – gameplay screenshot" class="carousel-img is-active">
+              <img src="/assets/img/projects/library-alexandria-2.jpg" alt="The Library of Alexandria – level / environment screenshot" class="carousel-img">
+              <img src="/assets/img/projects/library-alexandria-3.jpg" alt="The Library of Alexandria – concept art / poster" class="carousel-img">
+            </div>
+
+            <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
+          </div>
+
+          <div class="project-body">
+            <h3 class="project-title">The Library of Alexandria (Narrative Roguelike Prototype)</h3>
+
+            <p class="muted">
+              A story-driven 2D game prototype with roguelike structure, dialogue, and a themed progression system
+              where collected “books” grant perks that change the player’s abilities.
+            </p>
+
+            <div class="project-tags">
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">Game Dev</span>
+              <span class="tag">Procedural</span>
+              <span class="tag">Narrative</span>
+            </div>
+
+            <ul class="project-meta">
+              <li><strong>Role:</strong> Three-person team</li>
+              <li><strong>Year:</strong> 2023</li>
+              <li><strong>My work:</strong> Procedural level generation, character sprites/animations, structuring the narrative project in Unity</li>
+              <li><strong>Focus:</strong> Seeded generation, perk-based progression, dialogue system</li>
+            </ul>
+
+            <div class="project-links">
+              <a class="link" href="/projects/library-of-alexandria/">Project details →</a>
+              <span class="dot">•</span>
+              <a class="link" href="#" aria-disabled="true">GitHub →</a>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
@@ -184,7 +409,7 @@
     <section class="card">
       <h2>Project archive</h2>
       <p class="muted">
-        Smaller builds, experiments, and coursework projects. Add as many as you want.
+        Smaller builds, experiments, and coursework projects.
       </p>
 
       <div class="archive">
@@ -193,14 +418,6 @@
           <p class="muted">Gameplay systems, shooting feel, impact effects, and iteration.</p>
           <div class="project-tags">
             <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Game Dev</span>
-          </div>
-        </article>
-
-        <article class="archive-item">
-          <h3>Arduino Racing Wheel + LEDs</h3>
-          <p class="muted">Servo feedback steering + gear switches + rev LED indicator integration.</p>
-          <div class="project-tags">
-            <span class="tag">Arduino</span><span class="tag">Hardware</span><span class="tag">Unity</span>
           </div>
         </article>
 
@@ -227,7 +444,6 @@
     </section>
   </main>
 
-  <!-- Keep footer the same -->
   <footer class="container footer">
     <p>© <span id="year"></span> Martin Rasmussen</p>
   </footer>
@@ -235,5 +451,7 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+  <script src="/js/main.js"></script>
 </body>
 </html>

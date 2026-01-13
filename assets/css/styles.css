@@ -62,13 +62,28 @@ body {
    ========================================= */
 
 .nav-bar {
-  background: #0b84ff;
+  /*background: #0b84ff;*/
   display: flex;
   padding-left: 0px;
   isolation: isolate; /* keeps z-index predictable */
 
   /* ✅ Clip the rings so they can't escape the blue bar area */
   overflow: hidden;
+
+  background: linear-gradient(
+    to bottom,
+    #2ea2ff 0%,
+    #0b84ff 55%,
+    #0868c9 100%
+  );
+
+  /* ✨ subtle shadow underneath */
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.64),
+    0 8px 16px rgba(0, 0, 0, 0.32);
+
+  position: relative;
+  z-index: 10; /* ensures shadow appears above page content */
 }
 
 /* =========================================
@@ -87,15 +102,23 @@ body {
   padding: 16px 28px;
 
   /* base */
-  background: #0b84ff;
+  /*background: #0b84ff;*/
+  /* Base button gradient */
+  background: linear-gradient(
+    to bottom,
+    #2ea2ff 0%,
+    #0b84ff 60%,
+    #0868c9 100%
+  );
+
 
   /* ✅ This is the key: big radius makes it feel like a cut from a large circle */
-  --tab-radius: 20px;        /* 🔧 try 140px–320px */
+  --tab-radius: 17px;        /* 🔧 try 140px–320px */
   border-top-right-radius: var(--tab-radius);
   border-bottom-right-radius: var(--tab-radius);
 
   /* seam ring settings */
-  --seam-size: 120px;         /* 🔧 circle diameter */
+  --seam-size: 140px;         /* 🔧 circle diameter */
   --seam-thickness: 4px;      /* 🔧 ring thickness */
 
   /* needed to clip seam ring slice */
@@ -139,8 +162,6 @@ body {
 .nav-btn::after {
   content: "";
   position: absolute;
-
-  /* circle anchored to the right edge */
   left: 100%;
   top: 50%;
   transform: translate(-100%, -50%);
@@ -148,12 +169,31 @@ body {
   width: var(--seam-size);
   height: var(--seam-size);
 
-  border: var(--seam-thickness) solid #fff;
+  border: var(--seam-thickness) solid rgba(255, 255, 255, 0.9);
   border-radius: 50%;
   pointer-events: none;
+  z-index: 6; /* stays on top */
+}
 
-  /* seam always on top */
-  z-index: 5;
+.nav-btn::before {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+
+  /* 🔧 slight offset to create the “grey side” */
+  transform: translate(calc(-100% - 2px), calc(-50% + 0px));
+
+  width: var(--seam-size);
+  height: var(--seam-size);
+
+  border: var(--seam-thickness) solid rgba(0,0,0,0.25);
+  border-radius: 50%;
+
+  filter: blur(2px);
+
+  pointer-events: none;
+  z-index: 5; /* behind the white ring */
 }
 
 /* =========================================
@@ -315,4 +355,241 @@ body {
 
 .cta {
   border: 1px solid #0b84ff33;
+}
+
+/* =========================================
+   PROJECTS PAGE - LAYOUT
+   ========================================= */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 14px;
+}
+
+/* Responsive: 2 columns, then 1 column */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 620px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Each highlighted project becomes its own “card” */
+.project-tile {
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fake thumbnail area (replace later with image) */
+.project-thumb {
+  height: 140px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.20), rgba(0,0,0,0.08));
+}
+
+/* Inner padding */
+.project-body {
+  padding: 16px;
+}
+
+.project-title {
+  margin: 0 0 6px 0;
+}
+
+.project-meta {
+  margin: 12px 0 0 0;
+  padding-left: 18px;
+}
+
+/* Tags row inside tiles */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* Link row inside tiles */
+.project-links {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot {
+  opacity: 0.6;
+}
+
+/* =========================================
+   SEARCH / FILTERS (visual only)
+   ========================================= */
+
+.project-controls {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+  font: inherit;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/*
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #fff;
+  font-weight: 600;
+  cursor: default;
+}
+  */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+
+  font: inherit;
+  color: inherit;
+}
+
+.chip:hover {
+  background: #f8fafc;
+}
+
+.chip.is-active {
+  border-color: #0b84ff;
+  box-shadow: 0 0 0 3px rgba(11, 132, 255, 0.15);
+}
+
+/* =========================================
+   ARCHIVE - make each item its own mini-card
+   ========================================= */
+
+.archive {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.archive-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 14px 16px;
+}
+
+.archive-item h3 {
+  margin: 0 0 6px 0;
+}
+
+/* =========================================
+   Accessibility helper (used by your label)
+   ========================================= */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* =========================================
+   PROJECT IMAGE CAROUSEL
+   ========================================= */
+
+.project-thumb.carousel {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  background: #e5e7eb;
+}
+
+/* Image track */
+.carousel-track {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Images */
+.carousel-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.carousel-img.is-active {
+  opacity: 1;
+}
+
+/* Navigation buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  background: rgba(15, 23, 42, 0.6);
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  font-size: 20px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn.prev {
+  left: 8px;
+}
+
+.carousel-btn.next {
+  right: 8px;
+}
+
+.carousel-btn:hover {
+  background: rgba(15, 23, 42, 0.85);
 }
