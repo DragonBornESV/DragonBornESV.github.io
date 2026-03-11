@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project Title | Marty Rasmussen</title>
+  <title>Interactive Racing Wheel System | Marty Rasmussen</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 
@@ -33,31 +33,32 @@
   <main class="container">
     <!-- HERO -->
     <section class="card hero project-detail-hero">
-      <p class="hero-kicker">Project detail • Category • Year</p>
-      <h1 class="hero-title">Project Title</h1>
+      <p class="hero-kicker">Project detail • Hardware / Unity Integration • 2024</p>
+      <h1 class="hero-title">Interactive Racing Wheel System</h1>
 
       <p class="hero-tagline">
-        One clear sentence describing what the project is, what it does, and why it matters.
+        An Arduino-based racing wheel prototype with steering input, paddle shifting, and LED rev
+        feedback, connected to Unity for live wheel angle, gear, revs, and speed display.
       </p>
 
       <div class="hero-tags" aria-label="Project technologies">
+        <span class="tag">Arduino Uno</span>
         <span class="tag">Unity</span>
         <span class="tag">C#</span>
-        <span class="tag">AR Foundation</span>
-        <span class="tag">Mobile AR</span>
+        <span class="tag">Serial</span>
+        <span class="tag">Servo</span>
+        <span class="tag">DotStar LEDs</span>
       </div>
 
       <ul class="project-meta detail-meta">
-        <li><strong>Role:</strong> Solo / Team</li>
-        <li><strong>Year:</strong> 2025</li>
-        <li><strong>Type:</strong> Bachelor project / Course project / Prototype</li>
-        <li><strong>Focus:</strong> Short summary of the main technical and design focus</li>
+        <li><strong>Role:</strong> Solo</li>
+        <li><strong>Year:</strong> 2024</li>
+        <li><strong>My work:</strong> Hardware build, Arduino logic, Unity integration, rev simulation, and on-screen visualization</li>
+        <li><strong>Focus:</strong> Hardware↔Unity integration, real-time feedback, steering input, gear shifting, and LED rev display</li>
       </ul>
 
       <div class="project-links">
-        <a class="link" href="https://youtube.com/" target="_blank" rel="noopener">Full video →</a>
-        <span class="dot">•</span>
-        <a class="link disabled" href="#">Short version →</a>
+        <a class="link" href="https://youtu.be/vROQNDRrj6k" target="_blank" rel="noopener">Video →</a>
         <span class="dot">•</span>
         <a class="link" href="/projects/">Back to projects →</a>
       </div>
@@ -67,12 +68,17 @@
     <section class="card">
       <h2>Project summary</h2>
       <p>
-        Write a short abstract-style summary here. This section should explain what the project is,
-        what problem or goal it addresses, and what kind of result was achieved.
+        This project was built as an interactive racing wheel prototype that combines physical
+        hardware input with real-time visualization in Unity. The goal was to simulate core racing
+        interactions such as steering, shifting gears, and monitoring engine revs through both
+        physical controls and digital feedback.
       </p>
       <p>
-        Keep it compact and readable. Think of it as the quickest way for someone to understand the
-        project before they scroll further into the details.
+        The final system uses an Arduino Uno, a servo motor with analog feedback, two paddle-style
+        microswitches, and an 8-LED DotStar strip. Unity receives the live hardware data over serial
+        communication and displays wheel angle, current gear, rev percentage, and calculated speed.
+        The result is a compact prototype that demonstrates how hardware and software can work
+        together to create a more tactile driving interface.
       </p>
     </section>
 
@@ -82,8 +88,8 @@
 
       <div class="video-embed">
         <iframe
-          src="https://www.youtube.com/embed/VIDEO_ID"
-          title="Project video"
+          src="https://www.youtube.com/embed/vROQNDRrj6k"
+          title="Interactive Racing Wheel System video"
           loading="lazy"
           allowfullscreen>
         </iframe>
@@ -97,34 +103,42 @@
       <div class="detail-gallery lightbox-gallery">
         <figure class="detail-gallery-item">
           <img
-            src="/assets/img/projects/example-01.jpg"
-            alt="Project screenshot 1"
-            data-caption="Short caption explaining what is shown in this image.">
-          <figcaption class="muted">Short caption explaining what is shown in this image.</figcaption>
+            src="/assets/img/projects/racing-wheel/wheel_photo_01.jpg"
+            alt="Top view of the circular racing wheel base with LED strip and paddle switches"
+            data-caption="Top view of the racing wheel prototype showing the circular base, central steering mechanism, paddle-style switch layout, and mounted LED rev strip.">
+          <figcaption class="muted">Top view of the racing wheel prototype showing the circular base, central steering mechanism, paddle-style switch layout, and mounted LED rev strip.</figcaption>
         </figure>
 
         <figure class="detail-gallery-item">
           <img
-            src="/assets/img/projects/example-02.jpg"
-            alt="Project screenshot 2"
-            data-caption="Short caption explaining what is shown in this image.">
-          <figcaption class="muted">Short caption explaining what is shown in this image.</figcaption>
+            src="/assets/img/projects/racing-wheel/wheel_photo_02.jpg"
+            alt="Rear view of the prototype showing Arduino, breadboard, and wiring"
+            data-caption="Rear view of the system showing the Arduino Uno, breadboard wiring, servo placement, and the internal layout used to connect the hardware components.">
+          <figcaption class="muted">Rear view of the system showing the Arduino Uno, breadboard wiring, servo placement, and the internal layout used to connect the hardware components.</figcaption>
         </figure>
 
         <figure class="detail-gallery-item">
           <img
-            src="/assets/img/projects/example-03.jpg"
-            alt="Project screenshot 3"
-            data-caption="Short caption explaining what is shown in this image.">
-          <figcaption class="muted">Short caption explaining what is shown in this image.</figcaption>
+            src="/assets/img/projects/racing-wheel/wheel_photo_03.jpg"
+            alt="Close view of the Arduino and breadboard section of the racing wheel"
+            data-caption="Closer view of the Arduino and breadboard section, highlighting the wiring used for the servo feedback, paddle switches, and serial communication setup.">
+          <figcaption class="muted">Closer view of the Arduino and breadboard section, highlighting the wiring used for the servo feedback, paddle switches, and serial communication setup.</figcaption>
         </figure>
 
         <figure class="detail-gallery-item">
           <img
-            src="/assets/img/projects/example-04.jpg"
-            alt="Project screenshot 4"
-            data-caption="Short caption explaining what is shown in this image.">
-          <figcaption class="muted">Short caption explaining what is shown in this image.</figcaption>
+            src="/assets/img/projects/racing-wheel/wheel_photo_04.jpg"
+            alt="Side angle of the prototype hardware showing wiring and mounting"
+            data-caption="Side angle of the prototype showing how the components were mounted and secured during assembly, with emphasis on the physical structure of the wheel base.">
+          <figcaption class="muted">Side angle of the prototype showing how the components were mounted and secured during assembly, with emphasis on the physical structure of the wheel base.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+          <img
+            src="/assets/img/projects/racing-wheel/wheel_photo_05.jpg"
+            alt="Full prototype connected to Unity with LED rev strip active"
+            data-caption="Full system demonstration with the prototype connected to Unity, showing the LED rev strip active while the screen displays gear, revs, speed, and wheel angle in real time.">
+          <figcaption class="muted">Full system demonstration with the prototype connected to Unity, showing the LED rev strip active while the screen displays gear, revs, speed, and wheel angle in real time.</figcaption>
         </figure>
       </div>
     </section>
@@ -133,12 +147,17 @@
     <section class="card">
       <h2>Overview</h2>
       <p>
-        Explain what the project is, why it was created, and what problem or goal it addresses.
-        This section should give enough context for someone who has not seen the report or presentation.
+        The project was designed to simulate a simplified racing wheel system using physical
+        controls and visual feedback. Instead of building a full force-feedback wheel, the focus
+        was on capturing a few important elements of racing input: steering position, paddle
+        shifting, and engine rev indication.
       </p>
       <p>
-        Keep this portfolio-oriented rather than overly academic. Focus on what the project does,
-        who it was for, and what made it worth building.
+        Steering is measured using a 270° servo motor with analog feedback, while two microswitches
+        act as paddle shifters for gear up and gear down. An 8-LED DotStar strip visualizes engine
+        revs, and Unity receives the live data to present speed, gear, rev percentage, and wheel
+        angle on screen. This made the project both a hardware prototype and a real-time software
+        integration exercise.
       </p>
     </section>
 
@@ -146,15 +165,17 @@
     <section class="card">
       <h2>My role</h2>
       <p>
-        Describe exactly what you contributed. This is one of the most important sections for recruiters,
-        because it makes your responsibility in the project clear.
+        This was a solo project, so I was responsible for both the hardware and software sides of
+        the system, from the physical assembly to the Arduino logic and Unity visualization.
       </p>
 
       <ul class="bullets">
-        <li>Main implementation responsibility</li>
-        <li>Systems or features you built</li>
-        <li>Design, testing, iteration, or modeling work</li>
-        <li>Any collaboration boundaries if it was a team project</li>
+        <li>Built and assembled the racing wheel prototype using Arduino, servo, microswitches, breadboard, and LED strip</li>
+        <li>Implemented the Arduino logic for reading steering input and paddle shifts</li>
+        <li>Created the rev simulation system, including gear-based rev cut and rev boost behaviour</li>
+        <li>Controlled the DotStar LED strip to reflect current rev percentage</li>
+        <li>Integrated the Arduino output with Unity over serial communication</li>
+        <li>Built the Unity-side display for wheel angle, gear, rev percentage, and calculated speed</li>
       </ul>
     </section>
 
@@ -162,12 +183,23 @@
     <section class="card">
       <h2>Process and development</h2>
       <p>
-        Describe how the project was developed. Mention prototypes, iteration, major systems,
-        tools used, and important design decisions.
+        The system was developed as a combination of hardware assembly and software logic. On the
+        hardware side, the servo motor was mounted in the center of a circular base to act as the
+        steering mechanism, while two microswitches were placed on either side to mimic paddle
+        shifters. The DotStar LED strip was mounted on the base and connected to the Arduino for
+        rev visualization.
       </p>
       <p>
-        This section is where you explain how the project evolved from idea to working result.
-        It is a good place to show your technical thinking and development process.
+        The software was split into two parts. The Arduino handled input reading, rev calculations,
+        LED control, and serial transmission. Unity handled the real-time visualization of the data.
+        This separation made the system easier to structure and allowed the physical wheel to act as
+        a live input device while Unity focused on presenting the information clearly to the user.
+      </p>
+      <p>
+        The rev system was designed to behave somewhat like a race car: revs increase automatically,
+        shifting up reduces revs, and shifting down boosts them. The LED strip maps rev percentage to
+        the number of lit LEDs, while Unity displays the same state numerically as gear, speed, revs,
+        and steering angle.
       </p>
     </section>
 
@@ -178,14 +210,19 @@
         <div class="mini-card">
           <h3>Challenge</h3>
           <p>
-            Describe one important technical, design, or usability challenge from the project.
+            One of the main challenges was synchronizing the data exchange between Arduino and Unity.
+            Timing issues could cause unstable updates or inconsistent readings when both sides tried
+            to send and receive data too quickly. Another challenge was making rev behaviour feel
+            consistent when shifting between gears.
           </p>
         </div>
 
         <div class="mini-card">
           <h3>Solution</h3>
           <p>
-            Explain how you approached it, solved it, or improved it through testing and iteration.
+            I addressed the communication issue by alternating read and write operations more carefully,
+            which made the serial exchange more stable. For the rev logic, I added rev-cut and rev-boost
+            behaviour tied to gear changes so transitions felt more controlled and predictable during use.
           </p>
         </div>
       </div>
@@ -195,11 +232,19 @@
     <section class="card">
       <h2>Outcome and reflection</h2>
       <p>
-        Summarize the result of the project and what you learned from it. Mention what worked well,
-        what became clearer during the process, and what the final outcome showed.
+        The final result was a working prototype that successfully connected real-time hardware input
+        with a Unity-based display system. Steering, gear changes, rev logic, and LED feedback all worked
+        together to create a simple but convincing racing control concept.
+      </p>
+      <p>
+        The project was especially useful as an exercise in combining physical prototyping with software
+        visualization. It showed how even a relatively simple setup can become much more engaging when the
+        hardware input and digital feedback are tightly connected.
       </p>
       <p class="muted">
-        You can also mention what you would improve, expand, or do differently in a future version.
+        Looking back, the next natural steps would be to expand the system with pedals, a clutch,
+        a dedicated gear display, and a more advanced Unity dashboard. Even in its current form,
+        though, the project works well as a proof of concept for hardware-driven game input.
       </p>
     </section>
 

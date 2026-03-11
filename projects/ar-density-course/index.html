@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project Title | Marty Rasmussen</title>
+  <title>AR Density Learning App (Course Project) | Marty Rasmussen</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 
@@ -33,11 +33,12 @@
   <main class="container">
     <!-- HERO -->
     <section class="card hero project-detail-hero">
-      <p class="hero-kicker">Project detail • Category • Year</p>
-      <h1 class="hero-title">Project Title</h1>
+      <p class="hero-kicker">Project detail • AR / Learning Technology • 2024</p>
+      <h1 class="hero-title">AR Density Learning App (Course Project)</h1>
 
       <p class="hero-tagline">
-        One clear sentence describing what the project is, what it does, and why it matters.
+        A mobile AR learning tool that visualizes how materials with the same mass can have
+        different volumes by placing a scaled 3D object on top of a tracked real-world milk carton.
       </p>
 
       <div class="hero-tags" aria-label="Project technologies">
@@ -45,19 +46,19 @@
         <span class="tag">C#</span>
         <span class="tag">AR Foundation</span>
         <span class="tag">Mobile AR</span>
+        <span class="tag">Learning</span>
+        <span class="tag">User Testing</span>
       </div>
 
       <ul class="project-meta detail-meta">
-        <li><strong>Role:</strong> Solo / Team</li>
-        <li><strong>Year:</strong> 2025</li>
-        <li><strong>Type:</strong> Bachelor project / Course project / Prototype</li>
-        <li><strong>Focus:</strong> Short summary of the main technical and design focus</li>
+        <li><strong>Role:</strong> Two-person team (AR course)</li>
+        <li><strong>Year:</strong> 2024</li>
+        <li><strong>My work:</strong> Full app implementation, AR setup, scaling logic, UI, and interaction</li>
+        <li><strong>Focus:</strong> AR tracking, material selection, density→volume scaling</li>
       </ul>
 
       <div class="project-links">
-        <a class="link" href="https://youtube.com/" target="_blank" rel="noopener">Full video →</a>
-        <span class="dot">•</span>
-        <a class="link disabled" href="#">Short version →</a>
+        <a class="link" href="https://youtu.be/ftPs4txSZrY" target="_blank" rel="noopener">Video →</a>
         <span class="dot">•</span>
         <a class="link" href="/projects/">Back to projects →</a>
       </div>
@@ -67,12 +68,18 @@
     <section class="card">
       <h2>Project summary</h2>
       <p>
-        Write a short abstract-style summary here. This section should explain what the project is,
-        what problem or goal it addresses, and what kind of result was achieved.
+        This project was developed as part of an AR course and explores how augmented reality
+        can be used to support understanding of the relationship between mass and volume.
+        The main idea was to create a simple mobile application that tracks a familiar physical
+        object and places a virtual material on top of it at the correct scale, making density
+        easier to understand through direct visual comparison.
       </p>
       <p>
-        Keep it compact and readable. Think of it as the quickest way for someone to understand the
-        project before they scroll further into the details.
+        The application was built in Unity for mobile AR and uses a milk carton as the tracked
+        reference object. Different materials can be selected through the interface, and the
+        visualized object changes both size and texture based on the chosen material. The result
+        was a working prototype that clearly demonstrated the concept and later became the foundation
+        for the expanded bachelor project version.
       </p>
     </section>
 
@@ -82,8 +89,8 @@
 
       <div class="video-embed">
         <iframe
-          src="https://www.youtube.com/embed/VIDEO_ID"
-          title="Project video"
+          src="https://www.youtube.com/embed/ftPs4txSZrY"
+          title="AR Density Learning App course project video"
           loading="lazy"
           allowfullscreen>
         </iframe>
@@ -97,34 +104,26 @@
       <div class="detail-gallery lightbox-gallery">
         <figure class="detail-gallery-item">
           <img
-            src="/assets/img/projects/example-01.jpg"
-            alt="Project screenshot 1"
-            data-caption="Short caption explaining what is shown in this image.">
-          <figcaption class="muted">Short caption explaining what is shown in this image.</figcaption>
+            src="/assets/img/projects/ar-density-course/ARC_photo_01.jpg"
+            alt="Early AR prototype with a simple green cube placed on the tracked milk carton"
+            data-caption="An early prototype view showing a simple placeholder cube placed on top of the tracked milk carton while the material selection menu is visible below.">
+          <figcaption class="muted">An early prototype view showing a simple placeholder cube placed on top of the tracked milk carton while the material selection menu is visible below.</figcaption>
         </figure>
 
         <figure class="detail-gallery-item">
           <img
-            src="/assets/img/projects/example-02.jpg"
-            alt="Project screenshot 2"
-            data-caption="Short caption explaining what is shown in this image.">
-          <figcaption class="muted">Short caption explaining what is shown in this image.</figcaption>
+            src="/assets/img/projects/ar-density-course/ARC_photo_02.jpg"
+            alt="Gold material visualized on top of the tracked milk carton"
+            data-caption="A material example showing the gold cube placed directly on the milk carton, demonstrating how the selected material changes the size and appearance of the AR object.">
+          <figcaption class="muted">A material example showing the gold cube placed directly on the milk carton, demonstrating how the selected material changes the size and appearance of the AR object.</figcaption>
         </figure>
 
         <figure class="detail-gallery-item">
           <img
-            src="/assets/img/projects/example-03.jpg"
-            alt="Project screenshot 3"
-            data-caption="Short caption explaining what is shown in this image.">
-          <figcaption class="muted">Short caption explaining what is shown in this image.</figcaption>
-        </figure>
-
-        <figure class="detail-gallery-item">
-          <img
-            src="/assets/img/projects/example-04.jpg"
-            alt="Project screenshot 4"
-            data-caption="Short caption explaining what is shown in this image.">
-          <figcaption class="muted">Short caption explaining what is shown in this image.</figcaption>
+            src="/assets/img/projects/ar-density-course/ARC_photo_03.jpg"
+            alt="Course project poster for the AR Density prototype"
+            data-caption="Course poster summarizing the concept, method, and result of the prototype, including examples of the AR material visualization.">
+          <figcaption class="muted">Course poster summarizing the concept, method, and result of the prototype, including examples of the AR material visualization.</figcaption>
         </figure>
       </div>
     </section>
@@ -133,12 +132,17 @@
     <section class="card">
       <h2>Overview</h2>
       <p>
-        Explain what the project is, why it was created, and what problem or goal it addresses.
-        This section should give enough context for someone who has not seen the report or presentation.
+        The purpose of the project was to create a learning tool that could visualize how
+        different materials can have the same weight while occupying different amounts of
+        space. The application was designed for mobile phones and uses augmented reality
+        to place a virtual cube on top of a real-world object with known weight.
       </p>
       <p>
-        Keep this portfolio-oriented rather than overly academic. Focus on what the project does,
-        who it was for, and what made it worth building.
+        A one-kilogram milk carton was chosen as the tracked object because it is familiar,
+        easy to obtain, and has a regular box shape that works well for comparison. Six
+        materials were included in the first version: water, iron, copper, lead, gold, and
+        aluminum. These were chosen to show clear differences in density while still being
+        recognizable to the user.
       </p>
     </section>
 
@@ -146,15 +150,17 @@
     <section class="card">
       <h2>My role</h2>
       <p>
-        Describe exactly what you contributed. This is one of the most important sections for recruiters,
-        because it makes your responsibility in the project clear.
+        This was a two-person course project. My main responsibility was the implementation
+        of the application itself, including the AR setup, object scaling, interface design,
+        and interaction flow.
       </p>
 
       <ul class="bullets">
-        <li>Main implementation responsibility</li>
-        <li>Systems or features you built</li>
-        <li>Design, testing, iteration, or modeling work</li>
-        <li>Any collaboration boundaries if it was a team project</li>
+        <li>Implemented the application in Unity for mobile AR</li>
+        <li>Set up image tracking for the milk carton reference object</li>
+        <li>Built the logic for changing material, size, and appearance</li>
+        <li>Designed the UI and button-based material selection flow</li>
+        <li>Integrated the tracked object, material menu, and scaling behaviour into one working prototype</li>
       </ul>
     </section>
 
@@ -162,12 +168,24 @@
     <section class="card">
       <h2>Process and development</h2>
       <p>
-        Describe how the project was developed. Mention prototypes, iteration, major systems,
-        tools used, and important design decisions.
+        The project began with the idea of using AR to make the concept of density more
+        tangible. Instead of explaining density only through formulas, the goal was to let
+        the user see how different materials with the same weight would vary in size.
+        This made AR a good fit because it allowed a virtual object to be anchored directly
+        to a real object in the user’s environment.
       </p>
       <p>
-        This section is where you explain how the project evolved from idea to working result.
-        It is a good place to show your technical thinking and development process.
+        Unity was chosen because it was already familiar to the group and provided the
+        necessary AR and image-tracking tools. The application used Unity’s XR setup and
+        AR Tracked Image Manager to detect the front of a specific milk carton. A placeholder
+        cube was placed on top of the tracked image, and that cube was then resized and
+        retextured depending on the selected material.
+      </p>
+      <p>
+        The interface was intentionally simple. A scrollable menu at the bottom of the screen
+        let the user switch between materials, and the selected material immediately changed
+        the size and texture of the AR object. This made the prototype easy to demonstrate
+        and easy to understand at a glance.
       </p>
     </section>
 
@@ -178,14 +196,19 @@
         <div class="mini-card">
           <h3>Challenge</h3>
           <p>
-            Describe one important technical, design, or usability challenge from the project.
+            One of the main challenges was tracking stability. The AR object could jitter
+            slightly or slide visually on the milk carton when the viewing angle changed or
+            when the app temporarily lost focus on the tracked image.
           </p>
         </div>
 
         <div class="mini-card">
           <h3>Solution</h3>
           <p>
-            Explain how you approached it, solved it, or improved it through testing and iteration.
+            The prototype still worked reliably enough to demonstrate the core idea, and the
+            tracked cube snapped back into place when the app detected the milk carton again.
+            The project also made it clear that a higher-contrast marker or a more trackable
+            reference object could improve robustness in future versions.
           </p>
         </div>
       </div>
@@ -195,11 +218,22 @@
     <section class="card">
       <h2>Outcome and reflection</h2>
       <p>
-        Summarize the result of the project and what you learned from it. Mention what worked well,
-        what became clearer during the process, and what the final outcome showed.
+        The finished prototype successfully demonstrated that AR could be used to visualize
+        the relationship between mass and volume in a simple and understandable way. The
+        application tracked the milk carton, placed a virtual cube on top of it, and updated
+        that cube correctly when the user selected different materials.
+      </p>
+      <p>
+        From a learning perspective, the project leaned toward a constructivist approach,
+        where the user explores the concept through direct interaction rather than being guided
+        step by step. That made the prototype flexible and hands-on, but it also meant that
+        it assumed some prior understanding of density and offered limited guidance for users
+        who needed more explanation.
       </p>
       <p class="muted">
-        You can also mention what you would improve, expand, or do differently in a future version.
+        Looking back, this project was an important step toward the later bachelor version.
+        It proved the core concept, showed what worked technically, and made the limitations
+        clear enough to guide the more advanced and more structured version that followed.
       </p>
     </section>
 

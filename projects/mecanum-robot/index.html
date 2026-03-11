@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project Title | Marty Rasmussen</title>
+  <title>Wi-Fi-Controlled Omnidirectional Robot (Mecanum Wheels) | Marty Rasmussen</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
 
@@ -33,31 +33,32 @@
   <main class="container">
     <!-- HERO -->
     <section class="card hero project-detail-hero">
-      <p class="hero-kicker">Project detail • Category • Year</p>
-      <h1 class="hero-title">Project Title</h1>
+      <p class="hero-kicker">Project detail • Robotics / Wi-Fi Control • 2025</p>
+      <h1 class="hero-title">Wi-Fi-Controlled Omnidirectional Robot (Mecanum Wheels)</h1>
 
       <p class="hero-tagline">
-        One clear sentence describing what the project is, what it does, and why it matters.
+        A 3D-printed mecanum-wheel robot controlled from a browser over Wi-Fi, with an OLED
+        “eyes” display that reacts to movement commands.
       </p>
 
       <div class="hero-tags" aria-label="Project technologies">
-        <span class="tag">Unity</span>
-        <span class="tag">C#</span>
-        <span class="tag">AR Foundation</span>
-        <span class="tag">Mobile AR</span>
+        <span class="tag">Arduino Uno R4 WiFi</span>
+        <span class="tag">Wi-Fi / HTTP</span>
+        <span class="tag">Robotics</span>
+        <span class="tag">3D Printing</span>
+        <span class="tag">Fusion 360</span>
+        <span class="tag">OLED</span>
       </div>
 
       <ul class="project-meta detail-meta">
-        <li><strong>Role:</strong> Solo / Team</li>
+        <li><strong>Role:</strong> Two-person team</li>
         <li><strong>Year:</strong> 2025</li>
-        <li><strong>Type:</strong> Bachelor project / Course project / Prototype</li>
-        <li><strong>Focus:</strong> Short summary of the main technical and design focus</li>
+        <li><strong>My work:</strong> 3D modeling, physical hardware/chassis work, and OLED animations</li>
+        <li><strong>Focus:</strong> Wireless control, mecanum movement, chassis iteration, and expressive feedback</li>
       </ul>
 
       <div class="project-links">
-        <a class="link" href="https://youtube.com/" target="_blank" rel="noopener">Full video →</a>
-        <span class="dot">•</span>
-        <a class="link disabled" href="#">Short version →</a>
+        <a class="link" href="https://www.youtube.com/watch?v=SpRy7mJUIzA" target="_blank" rel="noopener">Video →</a>
         <span class="dot">•</span>
         <a class="link" href="/projects/">Back to projects →</a>
       </div>
@@ -67,12 +68,18 @@
     <section class="card">
       <h2>Project summary</h2>
       <p>
-        Write a short abstract-style summary here. This section should explain what the project is,
-        what problem or goal it addresses, and what kind of result was achieved.
+        This project was developed as part of the Hardware &amp; Robotics 3 course and focused on
+        building a compact robot with true omnidirectional movement using four mecanum wheels.
+        The goal was to combine wireless control, custom mechanical design, and expressive feedback
+        into a single working prototype.
       </p>
       <p>
-        Keep it compact and readable. Think of it as the quickest way for someone to understand the
-        project before they scroll further into the details.
+        The final robot uses an Arduino Uno R4 WiFi, an L293D motor shield, four N20 gear motors,
+        a 3D-printed chassis, and an SSD1306 OLED display mounted at the front. It connects to a
+        phone hotspot, hosts its own small browser-based control page, and responds to movement
+        commands with both wheel motion and animated “eyes” on the display. The result is a
+        portable robotics prototype that combines mechanical iteration, embedded programming,
+        and browser-based control in one system.
       </p>
     </section>
 
@@ -82,8 +89,8 @@
 
       <div class="video-embed">
         <iframe
-          src="https://www.youtube.com/embed/VIDEO_ID"
-          title="Project video"
+          src="https://www.youtube.com/embed/SpRy7mJUIzA"
+          title="Wi-Fi-Controlled Omnidirectional Robot video"
           loading="lazy"
           allowfullscreen>
         </iframe>
@@ -97,34 +104,50 @@
       <div class="detail-gallery lightbox-gallery">
         <figure class="detail-gallery-item">
           <img
-            src="/assets/img/projects/example-01.jpg"
-            alt="Project screenshot 1"
-            data-caption="Short caption explaining what is shown in this image.">
-          <figcaption class="muted">Short caption explaining what is shown in this image.</figcaption>
+            src="/assets/img/projects/omni-robot/omni_photo_01.jpg"
+            alt="Early CAD layout of the robot chassis"
+            data-caption="Final CAD model of the bottom chassis shell, containing the motor mounts, battery space, and structural supports for the robot’s drivetrain.">
+          <figcaption class="muted">Final CAD model of the bottom chassis shell, containing the motor mounts, battery space, and structural supports for the robot’s drivetrain.</figcaption>
         </figure>
 
         <figure class="detail-gallery-item">
           <img
-            src="/assets/img/projects/example-02.jpg"
-            alt="Project screenshot 2"
-            data-caption="Short caption explaining what is shown in this image.">
-          <figcaption class="muted">Short caption explaining what is shown in this image.</figcaption>
+            src="/assets/img/projects/omni-robot/omni_photo_02.jpg"
+            alt="Reinforced chassis CAD revision"
+            data-caption="Final CAD model of the top chassis shell, designed to house the electronics and complete the outer body of the robot when mounted to the base.">
+          <figcaption class="muted">Final CAD model of the top chassis shell, designed to house the electronics and complete the outer body of the robot when mounted to the base.</figcaption>
         </figure>
 
         <figure class="detail-gallery-item">
           <img
-            src="/assets/img/projects/example-03.jpg"
-            alt="Project screenshot 3"
-            data-caption="Short caption explaining what is shown in this image.">
-          <figcaption class="muted">Short caption explaining what is shown in this image.</figcaption>
+            src="/assets/img/projects/omni-robot/omni_photo_03.jpg"
+            alt="Finished robot seen from the front-left angle"
+            data-caption="Finished robot prototype with 3D-printed chassis, mecanum wheels, stacked control electronics, and OLED eyes visible in the front housing.">
+          <figcaption class="muted">Finished robot prototype with 3D-printed chassis, mecanum wheels, stacked control electronics, and OLED eyes visible in the front housing.</figcaption>
         </figure>
 
         <figure class="detail-gallery-item">
           <img
-            src="/assets/img/projects/example-04.jpg"
-            alt="Project screenshot 4"
-            data-caption="Short caption explaining what is shown in this image.">
-          <figcaption class="muted">Short caption explaining what is shown in this image.</figcaption>
+            src="/assets/img/projects/omni-robot/omni_photo_04.jpg"
+            alt="Front view of the robot showing OLED eyes"
+            data-caption="Front view highlighting the expressive OLED display, which changes eye animations depending on the robot’s movement state.">
+          <figcaption class="muted">Front view highlighting the expressive OLED display, which changes eye animations depending on the robot’s movement state.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+          <img
+            src="/assets/img/projects/omni-robot/omni_photo_05.jpg"
+            alt="Side view of the robot with mecanum wheels"
+            data-caption="Side profile of the assembled robot showing the wheel placement, chassis height, and compact body proportions of the final build.">
+          <figcaption class="muted">Side profile of the assembled robot showing the wheel placement, chassis height, and compact body proportions of the final build.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+          <img
+            src="/assets/img/projects/omni-robot/omni_photo_06.jpg"
+            alt="Top view of the robot showing Arduino and motor shield"
+            data-caption="Top view of the robot showing the Arduino Uno R4 WiFi and motor shield mounted inside the printed top shell for a compact integrated layout.">
+          <figcaption class="muted">Top view of the robot showing the Arduino Uno R4 WiFi and motor shield mounted inside the printed top shell for a compact integrated layout.</figcaption>
         </figure>
       </div>
     </section>
@@ -133,12 +156,17 @@
     <section class="card">
       <h2>Overview</h2>
       <p>
-        Explain what the project is, why it was created, and what problem or goal it addresses.
-        This section should give enough context for someone who has not seen the report or presentation.
+        The robot was designed to move in any direction without rotating its chassis, using the
+        force pattern created by four mecanum wheels with rollers mounted at 45 degrees. This made
+        it possible to drive forward, backward, sideways, diagonally, and rotate in place using
+        different wheel direction combinations.
       </p>
       <p>
-        Keep this portfolio-oriented rather than overly academic. Focus on what the project does,
-        who it was for, and what made it worth building.
+        To keep the system portable and easy to demonstrate, control was handled through a browser
+        instead of a dedicated app. The robot joins a phone hotspot and serves a small web page
+        directly from the Arduino, so any connected device can steer it using simple HTTP requests.
+        On top of that, an OLED display was added to give the robot a more expressive front-facing
+        identity through eye animations linked to movement.
       </p>
     </section>
 
@@ -146,15 +174,17 @@
     <section class="card">
       <h2>My role</h2>
       <p>
-        Describe exactly what you contributed. This is one of the most important sections for recruiters,
-        because it makes your responsibility in the project clear.
+        This was a two-person project. My main contribution was on the mechanical and visual side,
+        where I designed the robot body, worked on the physical hardware setup, and created the
+        OLED eye animations used during demonstrations.
       </p>
 
       <ul class="bullets">
-        <li>Main implementation responsibility</li>
-        <li>Systems or features you built</li>
-        <li>Design, testing, iteration, or modeling work</li>
-        <li>Any collaboration boundaries if it was a team project</li>
+        <li>Designed the chassis and mechanical parts in Fusion 360</li>
+        <li>Worked on the physical hardware layout and overall chassis construction</li>
+        <li>Helped iterate the body design to improve rigidity and fit</li>
+        <li>Created the OLED eye animations used as visual feedback on the robot</li>
+        <li>Contributed to the overall presentation and demonstration quality of the final build</li>
       </ul>
     </section>
 
@@ -162,12 +192,23 @@
     <section class="card">
       <h2>Process and development</h2>
       <p>
-        Describe how the project was developed. Mention prototypes, iteration, major systems,
-        tools used, and important design decisions.
+        The chassis was developed through several CAD iterations in Fusion 360. The early version
+        established the footprint and internal cavities for the motors, battery, and electronics,
+        while later versions added structural reinforcement, tightened tolerances around the motor
+        housings, and improved mounting for the OLED and Arduino stack.
       </p>
       <p>
-        This section is where you explain how the project evolved from idea to working result.
-        It is a good place to show your technical thinking and development process.
+        In the final revision, the chassis was split into a bottom shell and a removable top shell.
+        This made assembly easier and allowed the electronics to be clamped in place more securely.
+        The final printed system used PLA parts for the body and wheel hubs, with individual rollers
+        assembled into each mecanum wheel.
+      </p>
+      <p>
+        On the software side, the robot uses the Arduino Uno R4 WiFi to connect to a phone hotspot,
+        host a simple web server, and decode browser-based commands. The command system maps HTTP
+        requests to movement modes, while speed-ramp logic helps avoid sudden slips or current spikes.
+        Although the VL53L0X distance sensors planned for the project could not be included in the
+        final build, the design left room for later integration.
       </p>
     </section>
 
@@ -178,14 +219,19 @@
         <div class="mini-card">
           <h3>Challenge</h3>
           <p>
-            Describe one important technical, design, or usability challenge from the project.
+            One major challenge was getting consistent movement from the mecanum drive. Early testing
+            showed that some diagonal and sideways commands produced curved motion, and the first
+            chassis revisions also allowed too much flex and component movement during handling.
           </p>
         </div>
 
         <div class="mini-card">
           <h3>Solution</h3>
           <p>
-            Explain how you approached it, solved it, or improved it through testing and iteration.
+            The motion issue was solved by reversing the polarity of two motors rather than rewriting
+            the full drive map. On the mechanical side, later chassis revisions tightened clearances,
+            added reinforcement, and boxed in the Arduino standoffs so the electronics stayed fixed
+            even when cables were inserted or removed.
           </p>
         </div>
       </div>
@@ -195,11 +241,20 @@
     <section class="card">
       <h2>Outcome and reflection</h2>
       <p>
-        Summarize the result of the project and what you learned from it. Mention what worked well,
-        what became clearer during the process, and what the final outcome showed.
+        The final robot met the main project goals: it could move omnidirectionally using mecanum
+        wheels, receive wireless commands through a browser, and provide visual feedback through the
+        OLED display. The combination of 3D printing, embedded programming, and Wi-Fi control made
+        it a strong demonstration of both robotics and interactive prototyping.
+      </p>
+      <p>
+        One of the strongest parts of the project was the way the mechanical design and electronics
+        worked together in a compact form factor. The chassis became much more reliable through
+        iteration, and the OLED display helped give the robot more personality during demos.
       </p>
       <p class="muted">
-        You can also mention what you would improve, expand, or do differently in a future version.
+        Looking back, the most natural next step would be to finish the distance-sensor integration
+        and expose that data in the browser interface. That would move the project closer to
+        semi-autonomous behavior while building directly on the structure already in place.
       </p>
     </section>
 
