@@ -9,7 +9,7 @@
 
 body {
   margin: 0;
-  background: #f2f2f2;
+  background: #d6d6d6;
   color: #0f172a;
 }
 
@@ -110,7 +110,8 @@ body {
   margin-left: 0;
 }
 
-.nav-btn:hover {
+.nav-btn:hover,
+.nav-btn.is-current {
   background: #0868c9;
 }
 
@@ -199,7 +200,7 @@ body {
 }
 
 /* =========================================
-   HOME HERO (3-row layout)
+   HOME HERO
    ========================================= */
 
 .hero-header {
@@ -310,6 +311,39 @@ body {
 }
 
 /* =========================================
+   LINKS
+   ========================================= */
+
+.link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0b84ff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link.disabled {
+  color: #94a3b8;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
+
+.link.disabled:hover {
+  text-decoration: none;
+}
+
+.link.disabled::after {
+  content: " (coming soon)";
+  font-weight: 400;
+  color: #94a3b8;
+}
+
+/* =========================================
    HOME FEATURED PROJECTS
    ========================================= */
 
@@ -344,37 +378,8 @@ body {
   color: #475569;
 }
 
-.link {
-  display: inline-block;
-  margin-top: 10px;
-  color: #0b84ff;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-
-.link.disabled {
-  color: #94a3b8;
-  pointer-events: none;
-  cursor: default;
-  text-decoration: none;
-}
-
-.link.disabled:hover {
-  text-decoration: none;
-}
-
-.link.disabled::after {
-  content: " (coming soon)";
-  font-weight: 400;
-  color: #94a3b8;
-}
-
 /* =========================================
-   PROJECTS PAGE - LAYOUT
+   PROJECTS PAGE
    ========================================= */
 
 .projects-grid {
@@ -501,7 +506,7 @@ body {
 }
 
 /* =========================================
-   PROJECT IMAGE CAROUSEL
+   CAROUSELS
    ========================================= */
 
 .project-thumb.carousel {
@@ -589,12 +594,210 @@ body {
 }
 
 /* =========================================
+   PROJECT DETAIL PAGE
+   ========================================= */
+
+.detail-meta {
+  margin-top: 14px;
+}
+
+.video-embed {
+  margin-top: 16px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  background: #000;
+}
+
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* =========================================
+   PROJECT DETAIL MAIN MEDIA
+   ========================================= */
+
+.detail-main-carousel {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.detail-main-carousel.project-thumb.carousel {
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+}
+
+.detail-main-carousel .carousel-img {
+  object-fit: contain;
+  background: #000;
+}
+
+.detail-main-caption {
+  margin-top: 12px;
+}
+
+/* =========================================
+   PROJECT DETAIL GALLERY
+   ========================================= */
+
+.detail-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.detail-gallery-item {
+  margin: 0;
+}
+
+.detail-gallery-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  background: #000;
+}
+
+.detail-gallery-item figcaption {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #475569;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* =========================================
+   LIGHTBOX
+   ========================================= */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+}
+
+.lightbox.is-open {
+  display: block;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.82);
+}
+
+.lightbox-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.lightbox-figure {
+  margin: 0;
+  max-width: min(1000px, 90vw);
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-figure img {
+  max-width: 100%;
+  max-height: 72vh;
+  width: auto;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid #334155;
+  background: #000;
+  display: block;
+}
+
+.lightbox-figure figcaption {
+  margin-top: 12px;
+  background: #ffffff;
+  color: #0f172a;
+  padding: 12px 14px;
+  border-radius: 12px;
+  max-width: 100%;
+  text-align: left;
+}
+
+.lightbox-close,
+.lightbox-nav {
+  position: absolute;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0f172a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-close {
+  top: 20px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  font-size: 22px;
+}
+
+.lightbox-nav {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  font-size: 28px;
+}
+
+.lightbox-prev {
+  left: 24px;
+}
+
+.lightbox-next {
+  right: 24px;
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+  background: #ffffff;
+}
+
+/* =========================================
    RESPONSIVE
    ========================================= */
 
 @media (max-width: 900px) {
   .projects-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .detail-gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -636,10 +839,36 @@ body {
     width: 200px;
     height: 200px;
   }
+
+  .lightbox-content {
+    padding: 16px;
+  }
+
+  .lightbox-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .lightbox-prev {
+    left: 10px;
+  }
+
+  .lightbox-next {
+    right: 10px;
+  }
+
+  .lightbox-figure figcaption {
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 620px) {
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .detail-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

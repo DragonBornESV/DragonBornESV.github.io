@@ -162,3 +162,71 @@ document.addEventListener("DOMContentLoaded", () => {
   // Default render
   applyAll();
 });
+
+// =========================================================
+// GALLERY LIGHTBOX
+// =========================================================
+document.addEventListener("DOMContentLoaded", () => {
+  const galleryImages = Array.from(document.querySelectorAll(".lightbox-gallery img"));
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightbox-image");
+  const lightboxCaption = document.getElementById("lightbox-caption");
+  const closeBtn = document.querySelector(".lightbox-close");
+  const prevBtn = document.querySelector(".lightbox-prev");
+  const nextBtn = document.querySelector(".lightbox-next");
+  const backdrop = document.querySelector(".lightbox-backdrop");
+
+  if (!galleryImages.length || !lightbox || !lightboxImage || !lightboxCaption) return;
+
+  let currentIndex = 0;
+
+  function showImage(index) {
+    const img = galleryImages[index];
+    if (!img) return;
+
+    lightboxImage.src = img.src;
+    lightboxImage.alt = img.alt || "";
+    lightboxCaption.textContent = img.dataset.caption || "";
+    currentIndex = index;
+  }
+
+  function openLightbox(index) {
+    showImage(index);
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  function showNext() {
+    const nextIndex = (currentIndex + 1) % galleryImages.length;
+    showImage(nextIndex);
+  }
+
+  function showPrev() {
+    const prevIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    showImage(prevIndex);
+  }
+
+  galleryImages.forEach((img, index) => {
+    img.addEventListener("click", () => openLightbox(index));
+  });
+
+  if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+  if (backdrop) backdrop.addEventListener("click", closeLightbox);
+  if (nextBtn) nextBtn.addEventListener("click", showNext);
+  if (prevBtn) prevBtn.addEventListener("click", showPrev);
+
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("is-open")) return;
+
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") showNext();
+    if (e.key === "ArrowLeft") showPrev();
+  });
+});

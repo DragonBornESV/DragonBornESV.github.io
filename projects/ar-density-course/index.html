@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Title | Marty Rasmussen</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+
+<body>
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <mask id="tab-cut-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="60">
+        <rect x="0" y="0" width="200" height="60" fill="black"></rect>
+        <circle cx="40" cy="30" r="60" fill="white"></circle>
+      </mask>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <div class="logo-area">
+      <img class="logo" src="/assets/img/logo.png" alt="Marty Rasmussen logo" />
+    </div>
+
+    <nav class="nav-bar">
+      <a class="nav-btn" href="/">Home</a>
+      <a class="nav-btn is-current" href="/projects/" aria-current="page">Projects</a>
+      <a class="nav-btn" href="/about/">About</a>
+      <a class="nav-btn" href="/contact/">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="card hero project-detail-hero">
+      <p class="hero-kicker">Project detail • Category • Year</p>
+      <h1 class="hero-title">Project Title</h1>
+
+      <p class="hero-tagline">
+        One clear sentence describing what the project is and why it matters.
+      </p>
+
+      <div class="hero-tags" aria-label="Project technologies">
+        <span class="tag">Unity</span>
+        <span class="tag">C#</span>
+        <span class="tag">AR Foundation</span>
+        <span class="tag">Mobile AR</span>
+      </div>
+
+      <ul class="project-meta detail-meta">
+        <li><strong>Role:</strong> Solo / Team</li>
+        <li><strong>Year:</strong> 2025</li>
+        <li><strong>Type:</strong> Bachelor project / Course project / Prototype</li>
+        <li><strong>Focus:</strong> Short summary of the main technical/design focus</li>
+      </ul>
+
+      <div class="project-links">
+        <a class="link" href="https://youtube.com/" target="_blank" rel="noopener">Video →</a>
+        <span class="dot">•</span>
+        <a class="link" href="/projects/">Back to projects →</a>
+      </div>
+    </section>
+
+    <!-- MAIN MEDIA -->
+    <section class="card">
+      <h2>Main media</h2>
+
+      <figure class="detail-hero-image">
+        <img src="/assets/img/projects/example-main.jpg" alt="Main screenshot or photo of the project">
+      </figure>
+
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID"
+          title="Project video"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="card">
+      <h2>Gallery</h2>
+
+      <div class="detail-gallery">
+        <figure class="detail-gallery-item">
+          <img src="/assets/img/projects/example-1.jpg" alt="Project screenshot 1">
+          <figcaption class="muted">Short caption describing what is shown.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+          <img src="/assets/img/projects/example-2.jpg" alt="Project screenshot 2">
+          <figcaption class="muted">Short caption describing what is shown.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+          <img src="/assets/img/projects/example-3.jpg" alt="Project screenshot 3">
+          <figcaption class="muted">Short caption describing what is shown.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="card">
+      <h2>Overview</h2>
+      <p>
+        Explain what the project is, why it was created, and what problem or goal it addresses.
+      </p>
+      <p>
+        Keep this section readable and portfolio-oriented, not like a full academic report.
+      </p>
+    </section>
+
+    <!-- MY ROLE -->
+    <section class="card">
+      <h2>My role</h2>
+      <p>
+        Describe exactly what you contributed. This is one of the most important sections for recruiters.
+      </p>
+
+      <ul class="bullets">
+        <li>Main implementation responsibility</li>
+        <li>Systems or features you built</li>
+        <li>Design, testing, iteration, or modeling work</li>
+      </ul>
+    </section>
+
+    <!-- PROCESS / DEVELOPMENT -->
+    <section class="card">
+      <h2>Process and development</h2>
+      <p>
+        Describe how the project was developed. Mention prototypes, iteration, major systems,
+        tools used, and important design decisions.
+      </p>
+      <p>
+        This section is good for explaining how the project evolved from idea to working result.
+      </p>
+    </section>
+
+    <!-- CHALLENGES -->
+    <section class="card">
+      <h2>Challenges and solutions</h2>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h3>Challenge</h3>
+          <p>
+            Describe one important technical or design challenge.
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>Solution</h3>
+          <p>
+            Explain how you approached it, solved it, or improved it through iteration.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTCOME / REFLECTION -->
+    <section class="card">
+      <h2>Outcome and reflection</h2>
+      <p>
+        Summarize the result of the project and what you learned from it.
+      </p>
+      <p class="muted">
+        You can also mention what you would improve, expand, or do differently in a future version.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="card cta">
+      <h2>Want to see more?</h2>
+      <p class="muted">
+        You can go back to the projects overview or get in touch if you want to know more about this project.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="/projects/">Back to projects</a>
+        <a class="btn ghost" href="/contact/">Contact</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="year"></span> Martin Rasmussen</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

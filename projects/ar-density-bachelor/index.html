@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AR Density Learning App (Bachelor Project) | Marty Rasmussen</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+
+<body>
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <mask id="tab-cut-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="60">
+        <rect x="0" y="0" width="200" height="60" fill="black"></rect>
+        <circle cx="40" cy="30" r="60" fill="white"></circle>
+      </mask>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <div class="logo-area">
+      <img class="logo" src="/assets/img/logo.png" alt="Marty Rasmussen logo" />
+    </div>
+
+    <nav class="nav-bar">
+      <a class="nav-btn" href="/">Home</a>
+      <a class="nav-btn is-current" href="/projects/" aria-current="page">Projects</a>
+      <a class="nav-btn" href="/about/">About</a>
+      <a class="nav-btn" href="/contact/">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="card hero project-detail-hero">
+      <p class="hero-kicker">Project detail • AR / Learning Technology • 2025–2026</p>
+      <h1 class="hero-title">AR Density Learning App (Bachelor Project)</h1>
+
+      <p class="hero-tagline">
+        A mobile AR learning application designed to help students understand the relationship
+        between mass, volume, and density by visualizing materials as correctly scaled 3D objects
+        in the real world.
+      </p>
+
+      <div class="hero-tags" aria-label="Project technologies">
+        <span class="tag">Unity</span>
+        <span class="tag">C#</span>
+        <span class="tag">AR Foundation 6.0</span>
+        <span class="tag">Mobile AR</span>
+        <span class="tag">Android</span>
+        <span class="tag">Learning Technology</span>
+      </div>
+
+      <ul class="project-meta detail-meta">
+        <li><strong>Role:</strong> Solo (Bachelor project)</li>
+        <li><strong>Year:</strong> 2025–2026</li>
+        <li><strong>Type:</strong> Bachelor project</li>
+        <li><strong>Focus:</strong> AR visualization, density-to-volume scaling, tracking robustness, iterative design, classroom feedback</li>
+      </ul>
+
+      <div class="project-links">
+        <a class="link" href="https://youtu.be/1FPJVOnkEoU?si=P5a_BOEV6OvGrxIc" target="_blank" rel="noopener">Full video →</a>
+        <span class="dot">•</span>
+        <a class="link" href="https://youtu.be/ZuxoXS7d148" target="_blank" rel="noopener">Short version →</a>
+        <span class="dot">•</span>
+        <a class="link" href="/projects/">Back to projects →</a>
+      </div>
+    </section>
+
+    <!-- PROJECT SUMMARY -->
+    <section class="card">
+      <h2>Project summary</h2>
+      <p>
+        This bachelor project explores how mobile augmented reality can be used as a learning technology
+        supplement in physics and chemistry education. The application visualizes materials as scaled 3D
+        objects placed on a tracked physical reference object, making it possible to compare how materials
+        with the same mass can occupy very different volumes depending on their density.
+      </p>
+      <p>
+        The project combines AR implementation, calculation logic, interface design, and iterative testing.
+        A major part of the work was making the application technically robust while also keeping it clear
+        and understandable for the intended users. The result was a working Android AR application developed
+        in Unity with AR Foundation and refined through classroom feedback and repeated iteration.
+      </p>
+    </section>
+
+    <!-- MAIN MEDIA -->
+    <section class="card">
+      <h2>Main media</h2>
+
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/1FPJVOnkEoU"
+          title="AR Density Learning App video demonstration"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="card">
+      <h2>Gallery</h2>
+
+      <div class="detail-gallery lightbox-gallery">
+        <figure class="detail-gallery-item">
+          <img
+            src="/assets/img/projects/ar-density-bachelor/BA_photo_01.jpg"
+            alt="Empty AR scene at startup"
+            data-caption="Empty AR scene at startup, where the main UI is available but no elements have yet been selected or visualized.">
+          <figcaption class="muted">Empty AR scene at startup, where the main UI is available but no elements have yet been selected or visualized.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+          <img
+            src="/assets/img/projects/ar-density-bachelor/BA_photo_02.jpg"
+            alt="Material selection menu"
+            data-caption="Material selection menu with options divided into metals and liquids (and gas at advanced level), which starts the material selection flow in the system.">
+          <figcaption class="muted">Material selection menu with options divided into metals and liquids (and gas at advanced level), which starts the material selection flow in the system.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+          <img
+            src="/assets/img/projects/ar-density-bachelor/BA_photo_03.jpg"
+            alt="Level selector interface"
+            data-caption="Level selector shown when the application starts for the first time, where functionality and complexity are adjusted to the chosen educational level.">
+          <figcaption class="muted">Level selector shown when the application starts for the first time, where functionality and complexity are adjusted to the chosen educational level.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+          <img
+            src="/assets/img/projects/ar-density-bachelor/BA_photo_04.jpg"
+            alt="Shape selection menu"
+            data-caption="Shape menu where the user can choose between available geometric forms depending on the selected material type and academic level.">
+          <figcaption class="muted">Shape menu where the user can choose between available geometric forms depending on the selected material type and academic level.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+          <img
+            src="/assets/img/projects/ar-density-bachelor/BA_photo_05.jpg"
+            alt="Settings menu"
+            data-caption="Settings menu for selecting units and display options, affecting the UI presentation without changing the internal calculations.">
+          <figcaption class="muted">Settings menu for selecting units and display options, affecting the UI presentation without changing the internal calculations.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+          <img
+            src="/assets/img/projects/ar-density-bachelor/BA_photo_06.jpg"
+            alt="Tracking lost interface"
+            data-caption="Feedback displayed when AR tracking is lost, informing the user and offering the option to re-establish tracking.">
+          <figcaption class="muted">Feedback displayed when AR tracking is lost, informing the user and offering the option to re-establish tracking.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+          <img
+            src="/assets/img/projects/ar-density-bachelor/BA_photo_07.jpg"
+            alt="Physical reference objects with tracking marker"
+            data-caption="Different physical reference objects with known weight and an attached tracking marker used for AR alignment.">
+          <figcaption class="muted">Different physical reference objects with known weight and an attached tracking marker used for AR alignment.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+          <img
+            src="/assets/img/projects/ar-density-bachelor/BA_photo_08.jpg"
+            alt="Tracking marker used for AR"
+            data-caption="The tracking marker used as the physical reference for the AR scene.">
+          <figcaption class="muted">The tracking marker used as the physical reference for the AR scene.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+          <img
+            src="/assets/img/projects/ar-density-bachelor/BA_photo_09.jpg"
+            alt="Unit settings interface"
+            data-caption="Settings interface showing the option to change which units different physical quantities are displayed in.">
+          <figcaption class="muted">Settings interface showing the option to change which units different physical quantities are displayed in.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+          <img
+            src="/assets/img/projects/ar-density-bachelor/BA_photo_10.jpg"
+            alt="Solid material visualization"
+            data-caption="Visualization of a solid material represented as a rectangular block in AR.">
+          <figcaption class="muted">Visualization of a solid material represented as a rectangular block in AR.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+          <img
+            src="/assets/img/projects/ar-density-bachelor/BA_photo_11.jpg"
+            alt="Gas visualization with adjustable parameters"
+            data-caption="Advanced gas visualization with adjustable parameters such as temperature, pressure, and mass.">
+          <figcaption class="muted">Advanced gas visualization with adjustable parameters such as temperature, pressure, and mass.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+          <img
+            src="/assets/img/projects/ar-density-bachelor/BA_photo_12.jpg"
+            alt="Liquid visualization"
+            data-caption="Visualization of a liquid represented as a cylinder inside a glass container.">
+          <figcaption class="muted">Visualization of a liquid represented as a cylinder inside a glass container.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+          <img
+            src="/assets/img/projects/ar-density-bachelor/BA_photo_13.jpg"
+            alt="Shape menu with measurement gizmos"
+            data-caption="Shape menu for selecting alternative visualization forms and measurement gizmos that display dimensions directly in the scene.">
+          <figcaption class="muted">Shape menu for selecting alternative visualization forms and measurement gizmos that display dimensions directly in the scene.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="card">
+      <h2>Overview</h2>
+      <p>
+        This project was developed as my bachelor project in Game Development and Learning Technology.
+        The goal was to explore how a mobile AR application could be used as a learning technology
+        supplement in physics and chemistry education to support students’ understanding of the relationship
+        between mass, volume, and density.
+      </p>
+      <p>
+        The app was built in Unity using AR Foundation for Android devices. By projecting virtual 3D
+        representations of materials onto a physical reference object with known mass, the application makes
+        it possible to see how materials with identical mass can occupy very different volumes depending on
+        their density. The system was designed as a supplement to teaching rather than a standalone learning platform.
+      </p>
+    </section>
+
+    <!-- MY ROLE -->
+    <section class="card">
+      <h2>My role</h2>
+      <p>
+        This was a solo project, and I was responsible for the full implementation of the application as well
+        as the design, testing, and iteration process.
+      </p>
+
+      <ul class="bullets">
+        <li>Built the app in Unity using AR Foundation 6.0 for Android</li>
+        <li>Implemented image-based AR tracking and object placement on a physical reference object</li>
+        <li>Developed the calculation logic for solids, liquids, and gases</li>
+        <li>Designed the UI and interaction flow, including level-based functionality</li>
+        <li>Conducted iterative user testing with lower secondary school students and incorporated feedback into later versions</li>
+      </ul>
+    </section>
+
+    <!-- PROCESS / DEVELOPMENT -->
+    <section class="card">
+      <h2>Process and development</h2>
+      <p>
+        The project followed an iterative development process rather than a strict linear one. I started with
+        early AR prototypes to test whether image tracking, scaling principles, and object stability would work
+        well enough in practice before expanding the system further. As the project developed, technical
+        implementation and didactic considerations influenced each other continuously.
+      </p>
+      <p>
+        A central part of the system was the separation between calculation and presentation. Solids and liquids
+        were calculated using density, while gases were calculated using the ideal gas law. Keeping these
+        calculations in a dedicated calculation module made it easier to adapt the interface and unit display
+        without changing the underlying physical relationships. This also supported real-time interaction, where
+        changes in parameters immediately affected the visual output.
+      </p>
+      <p>
+        As testing progressed, several features were simplified, limited, or reorganized in order to make the
+        app more understandable for the intended target group. One important result of this process was the
+        introduction of a level-based system, where functionality could be differentiated depending on the
+        students’ academic level.
+      </p>
+    </section>
+
+    <!-- CHALLENGES -->
+    <section class="card">
+      <h2>Challenges and solutions</h2>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h3>Challenge</h3>
+          <p>
+            One of the main challenges was balancing technical functionality with educational clarity.
+            Early versions risked becoming too complex for younger students, and AR tracking could also be
+            unstable when the marker was partially lost or the lighting conditions changed.
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>Solution</h3>
+          <p>
+            I addressed this by simplifying the interface, limiting features in the introductory stages,
+            and introducing a level-based structure that better matched different learner groups. On the
+            technical side, the application retained the last valid tracking position to create a more stable
+            and robust user experience when tracking briefly dropped out.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTCOME / REFLECTION -->
+    <section class="card">
+      <h2>Outcome and reflection</h2>
+      <p>
+        The final result was a functioning AR application that visualized materials in correct scale relative
+        to a physical object with known weight. The classroom tests suggested that students were able to relate
+        the visualizations to their everyday understanding of weight and size, and that the app helped make the
+        relationship between mass, volume, and density more concrete and intuitive.
+      </p>
+      <p>
+        At the same time, the project was not intended to measure learning effects quantitatively. The testing
+        focused on usability, intuitive interaction, and perceived conceptual understanding rather than formal
+        learning outcomes. That means the project should be understood as demonstrating practical potential and
+        design value rather than proving educational effect in a strict research sense.
+      </p>
+      <p class="muted">
+        Looking back, one of the most important lessons from the project was how much value there is in combining
+        technical prototyping with real user feedback. The strongest improvements did not come only from building
+        more features, but from simplifying, restructuring, and making the system more understandable for the
+        intended users.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="card cta">
+      <h2>Want to see more?</h2>
+      <p class="muted">
+        You can go back to the projects overview or get in touch if you want to know more about this project.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="/projects/">Back to projects</a>
+        <a class="btn ghost" href="/contact/">Contact</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop"></div>
+
+    <div class="lightbox-content" role="dialog" aria-modal="true" aria-label="Expanded gallery image">
+      <button class="lightbox-close" type="button" aria-label="Close gallery">✕</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">‹</button>
+
+      <figure class="lightbox-figure">
+        <img id="lightbox-image" src="" alt="">
+        <figcaption id="lightbox-caption"></figcaption>
+      </figure>
+
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">›</button>
+    </div>
+  </div>
+
+  <footer class="container footer">
+    <p>© <span id="year"></span> Martin Rasmussen</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
