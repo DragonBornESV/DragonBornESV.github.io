@@ -37,7 +37,7 @@
       <h1 class="hero-title">Project Title</h1>
 
       <p class="hero-tagline">
-        One clear sentence describing what the project is and why it matters.
+        One clear sentence describing what the project is, what it does, and why it matters.
       </p>
 
       <div class="hero-tags" aria-label="Project technologies">
@@ -51,23 +51,34 @@
         <li><strong>Role:</strong> Solo / Team</li>
         <li><strong>Year:</strong> 2025</li>
         <li><strong>Type:</strong> Bachelor project / Course project / Prototype</li>
-        <li><strong>Focus:</strong> Short summary of the main technical/design focus</li>
+        <li><strong>Focus:</strong> Short summary of the main technical and design focus</li>
       </ul>
 
       <div class="project-links">
-        <a class="link" href="https://youtube.com/" target="_blank" rel="noopener">Video →</a>
+        <a class="link" href="https://youtube.com/" target="_blank" rel="noopener">Full video →</a>
+        <span class="dot">•</span>
+        <a class="link disabled" href="#">Short version →</a>
         <span class="dot">•</span>
         <a class="link" href="/projects/">Back to projects →</a>
       </div>
     </section>
 
+    <!-- PROJECT SUMMARY -->
+    <section class="card">
+      <h2>Project summary</h2>
+      <p>
+        Write a short abstract-style summary here. This section should explain what the project is,
+        what problem or goal it addresses, and what kind of result was achieved.
+      </p>
+      <p>
+        Keep it compact and readable. Think of it as the quickest way for someone to understand the
+        project before they scroll further into the details.
+      </p>
+    </section>
+
     <!-- MAIN MEDIA -->
     <section class="card">
       <h2>Main media</h2>
-
-      <figure class="detail-hero-image">
-        <img src="/assets/img/projects/example-main.jpg" alt="Main screenshot or photo of the project">
-      </figure>
 
       <div class="video-embed">
         <iframe
@@ -83,20 +94,37 @@
     <section class="card">
       <h2>Gallery</h2>
 
-      <div class="detail-gallery">
+      <div class="detail-gallery lightbox-gallery">
         <figure class="detail-gallery-item">
-          <img src="/assets/img/projects/example-1.jpg" alt="Project screenshot 1">
-          <figcaption class="muted">Short caption describing what is shown.</figcaption>
+          <img
+            src="/assets/img/projects/example-01.jpg"
+            alt="Project screenshot 1"
+            data-caption="Short caption explaining what is shown in this image.">
+          <figcaption class="muted">Short caption explaining what is shown in this image.</figcaption>
         </figure>
 
         <figure class="detail-gallery-item">
-          <img src="/assets/img/projects/example-2.jpg" alt="Project screenshot 2">
-          <figcaption class="muted">Short caption describing what is shown.</figcaption>
+          <img
+            src="/assets/img/projects/example-02.jpg"
+            alt="Project screenshot 2"
+            data-caption="Short caption explaining what is shown in this image.">
+          <figcaption class="muted">Short caption explaining what is shown in this image.</figcaption>
         </figure>
 
         <figure class="detail-gallery-item">
-          <img src="/assets/img/projects/example-3.jpg" alt="Project screenshot 3">
-          <figcaption class="muted">Short caption describing what is shown.</figcaption>
+          <img
+            src="/assets/img/projects/example-03.jpg"
+            alt="Project screenshot 3"
+            data-caption="Short caption explaining what is shown in this image.">
+          <figcaption class="muted">Short caption explaining what is shown in this image.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+          <img
+            src="/assets/img/projects/example-04.jpg"
+            alt="Project screenshot 4"
+            data-caption="Short caption explaining what is shown in this image.">
+          <figcaption class="muted">Short caption explaining what is shown in this image.</figcaption>
         </figure>
       </div>
     </section>
@@ -106,9 +134,11 @@
       <h2>Overview</h2>
       <p>
         Explain what the project is, why it was created, and what problem or goal it addresses.
+        This section should give enough context for someone who has not seen the report or presentation.
       </p>
       <p>
-        Keep this section readable and portfolio-oriented, not like a full academic report.
+        Keep this portfolio-oriented rather than overly academic. Focus on what the project does,
+        who it was for, and what made it worth building.
       </p>
     </section>
 
@@ -116,13 +146,15 @@
     <section class="card">
       <h2>My role</h2>
       <p>
-        Describe exactly what you contributed. This is one of the most important sections for recruiters.
+        Describe exactly what you contributed. This is one of the most important sections for recruiters,
+        because it makes your responsibility in the project clear.
       </p>
 
       <ul class="bullets">
         <li>Main implementation responsibility</li>
         <li>Systems or features you built</li>
         <li>Design, testing, iteration, or modeling work</li>
+        <li>Any collaboration boundaries if it was a team project</li>
       </ul>
     </section>
 
@@ -134,7 +166,8 @@
         tools used, and important design decisions.
       </p>
       <p>
-        This section is good for explaining how the project evolved from idea to working result.
+        This section is where you explain how the project evolved from idea to working result.
+        It is a good place to show your technical thinking and development process.
       </p>
     </section>
 
@@ -145,14 +178,14 @@
         <div class="mini-card">
           <h3>Challenge</h3>
           <p>
-            Describe one important technical or design challenge.
+            Describe one important technical, design, or usability challenge from the project.
           </p>
         </div>
 
         <div class="mini-card">
           <h3>Solution</h3>
           <p>
-            Explain how you approached it, solved it, or improved it through iteration.
+            Explain how you approached it, solved it, or improved it through testing and iteration.
           </p>
         </div>
       </div>
@@ -162,7 +195,8 @@
     <section class="card">
       <h2>Outcome and reflection</h2>
       <p>
-        Summarize the result of the project and what you learned from it.
+        Summarize the result of the project and what you learned from it. Mention what worked well,
+        what became clearer during the process, and what the final outcome showed.
       </p>
       <p class="muted">
         You can also mention what you would improve, expand, or do differently in a future version.
@@ -182,6 +216,23 @@
     </section>
   </main>
 
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop"></div>
+
+    <div class="lightbox-content" role="dialog" aria-modal="true" aria-label="Expanded gallery image">
+      <button class="lightbox-close" type="button" aria-label="Close gallery">✕</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">‹</button>
+
+      <figure class="lightbox-figure">
+        <img id="lightbox-image" src="" alt="">
+        <figcaption id="lightbox-caption"></figcaption>
+      </figure>
+
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">›</button>
+    </div>
+  </div>
+
   <footer class="container footer">
     <p>© <span id="year"></span> Martin Rasmussen</p>
   </footer>
@@ -189,5 +240,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script src="/js/main.js"></script>
 </body>
 </html>
