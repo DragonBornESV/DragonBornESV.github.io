@@ -8,7 +8,6 @@
 </head>
 
 <body>
-  <!-- Keep this EXACTLY the same across pages (your nav mask) -->
   <svg width="0" height="0" style="position:absolute">
     <defs>
       <mask id="tab-cut-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="60">
@@ -18,7 +17,6 @@
     </defs>
   </svg>
 
-  <!-- Keep header/nav the same -->
   <header class="site-header">
     <div class="logo-area">
       <img class="logo" src="/assets/img/logo.png" alt="Marty Rasmussen logo" />
@@ -39,8 +37,8 @@
       <h1 class="hero-title">Projects</h1>
       <p class="hero-subtitle">
         A collection of my work across <strong>game development</strong>, <strong>AR/VR</strong>, and
-        <strong>hardware prototyping</strong>. Each project includes what I built, what I learned,
-        and the tools/tech involved.
+        <strong>hardware prototyping</strong>. This page is meant as an overview, while the individual
+        project pages will go into more depth with process, challenges, and technical details.
       </p>
 
       <div class="hero-tags" aria-label="Quick filters">
@@ -90,7 +88,7 @@
 
       <div class="projects-grid">
 
-        <!-- Project: AR Density Learning App (Bachelor / full version) -->
+        <!-- Project: AR Density Learning App (Bachelor) -->
         <article class="project-tile" data-tags="ar unity">
           <div class="project-thumb carousel">
             <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
@@ -98,7 +96,7 @@
             <div class="carousel-track">
               <img src="/assets/img/projects/ar-density-ba-01.jpg" alt="Bachelor AR Density app: tracked marker with scaled material cube" class="carousel-img is-active">
               <img src="/assets/img/projects/ar-density-ba-02.jpg" alt="Bachelor AR Density app: material selection and info UI" class="carousel-img">
-              <img src="/assets/img/projects/ar-density-ba-03.jpg" alt="Bachelor AR Density app: comparing materials / density-to-volume effect" class="carousel-img">
+              <img src="/assets/img/projects/ar-density-ba-03.jpg" alt="Bachelor AR Density app: comparing materials and density-to-volume effect" class="carousel-img">
             </div>
 
             <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
@@ -110,7 +108,7 @@
             <p class="muted">
               A mobile AR learning application that helps students understand the relationship between
               <strong>mass, volume, and density</strong> by visualizing materials as a scaled 3D object in the real world.
-              Built in Unity with AR Foundation and developed through iterative testing and refinement.
+              Built in Unity with AR Foundation and refined through iterative design and classroom testing.
             </p>
 
             <div class="project-tags">
@@ -125,18 +123,19 @@
             <ul class="project-meta">
               <li><strong>Role:</strong> Solo (Bachelor project)</li>
               <li><strong>Year:</strong> 2025–2026</li>
-              <li><strong>Focus:</strong> Density→volume scaling, tracking robustness, iterative design & testing</li>
+              <li><strong>My work:</strong> Full app implementation, AR logic, UI, interaction flow, testing, and iteration</li>
+              <li><strong>Focus:</strong> Density→volume scaling, tracking robustness, iterative design, classroom feedback</li>
             </ul>
 
             <div class="project-links">
-              <a class="link" href="#" aria-disabled="true">Project details →</a>
+              <a class="link disabled" href="#">Project details →</a>
               <span class="dot">•</span>
-              <a class="link" href="https://youtu.be/1FPJVOnkEoU?si=P5a_BOEV6OvGrxIc" aria-disabled="true">Video →</a>
+              <a class="link" href="https://youtu.be/1FPJVOnkEoU?si=P5a_BOEV6OvGrxIc" target="_blank" rel="noopener">Video →</a>
             </div>
           </div>
         </article>
 
-        <!-- Project: AR Density Learning App (course version) -->
+        <!-- Project: AR Density Learning App (Course Project) -->
         <article class="project-tile" data-tags="ar unity">
           <div class="project-thumb carousel">
             <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
@@ -151,11 +150,11 @@
           </div>
 
           <div class="project-body">
-            <h3 class="project-title">AR Density Learning App (smaller project)</h3>
+            <h3 class="project-title">AR Density Learning App (Course Project)</h3>
 
             <p class="muted">
               Mobile AR learning tool that visualizes how <strong>the same mass</strong> can have
-              <strong>different volumes</strong> depending on material density — by placing a resizable,
+              <strong>different volumes</strong> depending on material density by placing a resizable,
               textured cube on a tracked real-world object.
             </p>
 
@@ -170,13 +169,14 @@
             <ul class="project-meta">
               <li><strong>Role:</strong> Two-person team (AR course)</li>
               <li><strong>Year:</strong> 2024</li>
-              <li><strong>Focus:</strong> AR tracking, UI material menu, density→volume scaling</li>
+              <li><strong>My work:</strong> Full app implementation, AR setup, scaling logic, UI, and interaction</li>
+              <li><strong>Focus:</strong> AR tracking, material selection, density→volume scaling</li>
             </ul>
 
             <div class="project-links">
-              <a class="link" href="#">Project details →</a>
+              <a class="link disabled" href="#">Project details →</a>
               <span class="dot">•</span>
-              <a class="link" href="#">Video →</a>
+              <a class="link disabled" href="#">Video →</a>
             </div>
           </div>
         </article>
@@ -196,11 +196,11 @@
           </div>
 
           <div class="project-body">
-            <h3 class="project-title">VR Organs Explorer (Medical Visualization)</h3>
+            <h3 class="project-title">VR Organ Explorer</h3>
 
             <p class="muted">
-              Educational VR application designed to help medical students explore human anatomy
-              through interactive 3D organ models in an immersive, low-stress learning environment.
+              VR learning application designed to help medical students explore human anatomy
+              through interactive 3D organ models in an immersive, low-stress environment.
             </p>
 
             <div class="project-tags">
@@ -214,13 +214,14 @@
             <ul class="project-meta">
               <li><strong>Role:</strong> Two-person team</li>
               <li><strong>Year:</strong> 2024</li>
-              <li><strong>Focus:</strong> Immersive learning, anatomy visualization, interaction</li>
+              <li><strong>My work:</strong> Nearly all implementation, interaction logic, scene setup, and app structure</li>
+              <li><strong>Focus:</strong> Immersive learning, anatomy visualization, interaction design</li>
             </ul>
 
             <div class="project-links">
-              <a class="link" href="#" aria-disabled="true">Project details →</a>
+              <a class="link disabled" href="#">Project details →</a>
               <span class="dot">•</span>
-              <a class="link" href="https://youtu.be/pZfBDFP4N48?si=CRPDa-1dXdcDohWW" aria-disabled="true">Video →</a>
+              <a class="link" href="https://youtu.be/pZfBDFP4N48?si=CRPDa-1dXdcDohWW" target="_blank" rel="noopener">Video →</a>
             </div>
           </div>
         </article>
@@ -257,13 +258,14 @@
             <ul class="project-meta">
               <li><strong>Role:</strong> Two-person team</li>
               <li><strong>Year:</strong> 2024</li>
+              <li><strong>My work:</strong> Unity implementation, game logic, AR systems, and app-side interaction</li>
               <li><strong>Focus:</strong> AR gameplay, physical interaction, custom input device</li>
             </ul>
 
             <div class="project-links">
-              <a class="link" href="#" aria-disabled="true">Project details →</a>
+              <a class="link disabled" href="#">Project details →</a>
               <span class="dot">•</span>
-              <a class="link" href="https://youtu.be/oV8fnkoJ63I?si=oGyGcK6uy33eLPEz" aria-disabled="true">Video →</a>
+              <a class="link" href="https://youtu.be/oV8fnkoJ63I?si=oGyGcK6uy33eLPEz" target="_blank" rel="noopener">Video →</a>
             </div>
           </div>
         </article>
@@ -275,7 +277,7 @@
 
             <div class="carousel-track">
               <img src="/assets/img/projects/racing-wheel-1.jpg" alt="Racing wheel prototype with LED rev strip" class="carousel-img is-active">
-              <img src="/assets/img/projects/racing-wheel-2.jpg" alt="Arduino + wiring / breadboard setup for the racing wheel system" class="carousel-img">
+              <img src="/assets/img/projects/racing-wheel-2.jpg" alt="Arduino and wiring setup for the racing wheel system" class="carousel-img">
               <img src="/assets/img/projects/racing-wheel-3.jpg" alt="Unity UI showing wheel angle, gear, revs, and speed" class="carousel-img">
             </div>
 
@@ -283,11 +285,11 @@
           </div>
 
           <div class="project-body">
-            <h3 class="project-title">Interactive Racing Wheel System (Arduino + Unity)</h3>
+            <h3 class="project-title">Interactive Racing Wheel System</h3>
 
             <p class="muted">
-              Arduino-based racing wheel prototype with steering input (servo feedback), paddle-shift microswitches,
-              and an LED “rev” strip — connected to Unity for live wheel angle, gear, revs, and speed display.
+              Arduino-based racing wheel prototype with steering input, paddle shifting,
+              and LED rev feedback connected to Unity for live wheel angle, gear, revs, and speed display.
             </p>
 
             <div class="project-tags">
@@ -301,13 +303,13 @@
             <ul class="project-meta">
               <li><strong>Role:</strong> Solo</li>
               <li><strong>Year:</strong> 2024</li>
-              <li><strong>Focus:</strong> Hardware↔Unity integration, real-time feedback</li>
+              <li><strong>Focus:</strong> Hardware↔Unity integration, real-time feedback, input visualization</li>
             </ul>
 
             <div class="project-links">
-              <a class="link" href="#" aria-disabled="true">Project details →</a>
+              <a class="link disabled" href="#">Project details →</a>
               <span class="dot">•</span>
-              <a class="link" href="https://youtu.be/vROQNDRrj6k" aria-disabled="true">Video →</a>
+              <a class="link" href="https://youtu.be/vROQNDRrj6k" target="_blank" rel="noopener">Video →</a>
             </div>
           </div>
         </article>
@@ -330,7 +332,7 @@
             <h3 class="project-title">Wi-Fi-Controlled Omnidirectional Robot (Mecanum Wheels)</h3>
 
             <p class="muted">
-              A 3D-printed mecanum-wheel robot controlled from a browser over Wi-Fi (phone hotspot),
+              A 3D-printed mecanum-wheel robot controlled from a browser over Wi-Fi,
               with an OLED “eyes” display that reacts to movement commands.
             </p>
 
@@ -345,11 +347,12 @@
             <ul class="project-meta">
               <li><strong>Role:</strong> Two-person team</li>
               <li><strong>Year:</strong> 2025</li>
-              <li><strong>Focus:</strong> Wireless control, mecanum mapping, chassis iteration, OLED feedback</li>
+              <li><strong>My work:</strong> 3D modeling, physical hardware/chassis work, and OLED animations</li>
+              <li><strong>Focus:</strong> Wireless control, mecanum movement, chassis iteration, expressive feedback</li>
             </ul>
 
             <div class="project-links">
-              <a class="link" href="#" aria-disabled="true">Project details →</a>
+              <a class="link disabled" href="#">Project details →</a>
               <span class="dot">•</span>
               <a class="link" href="https://www.youtube.com/watch?v=SpRy7mJUIzA" target="_blank" rel="noopener">Video →</a>
             </div>
@@ -363,19 +366,19 @@
 
             <div class="carousel-track">
               <img src="/assets/img/projects/library-alexandria-1.jpg" alt="The Library of Alexandria – gameplay screenshot" class="carousel-img is-active">
-              <img src="/assets/img/projects/library-alexandria-2.jpg" alt="The Library of Alexandria – level / environment screenshot" class="carousel-img">
-              <img src="/assets/img/projects/library-alexandria-3.jpg" alt="The Library of Alexandria – concept art / poster" class="carousel-img">
+              <img src="/assets/img/projects/library-alexandria-2.jpg" alt="The Library of Alexandria – level or environment screenshot" class="carousel-img">
+              <img src="/assets/img/projects/library-alexandria-3.jpg" alt="The Library of Alexandria – concept art or poster" class="carousel-img">
             </div>
 
             <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
           </div>
 
           <div class="project-body">
-            <h3 class="project-title">The Library of Alexandria (Narrative Roguelike Prototype)</h3>
+            <h3 class="project-title">The Library of Alexandria</h3>
 
             <p class="muted">
-              A story-driven 2D game prototype with roguelike structure, dialogue, and a themed progression system
-              where collected “books” grant perks that change the player’s abilities.
+              A story-driven 2D game prototype with roguelike structure, dialogue, and a perk-based progression system
+              where collected books change the player’s abilities.
             </p>
 
             <div class="project-tags">
@@ -389,14 +392,14 @@
             <ul class="project-meta">
               <li><strong>Role:</strong> Three-person team</li>
               <li><strong>Year:</strong> 2023</li>
-              <li><strong>My work:</strong> Procedural level generation, character sprites/animations, structuring the narrative project in Unity</li>
+              <li><strong>My work:</strong> Designed and implemented the procedural level system, character sprites/animations, and narrative structure in Unity</li>
               <li><strong>Focus:</strong> Seeded generation, perk-based progression, dialogue system</li>
             </ul>
 
             <div class="project-links">
-              <a class="link" href="#">Project details →</a>
+              <a class="link disabled" href="#">Project details →</a>
               <span class="dot">•</span>
-              <a class="link" href="#" aria-disabled="true">GitHub →</a>
+              <a class="link disabled" href="#">GitHub →</a>
             </div>
           </div>
         </article>
@@ -406,7 +409,7 @@
 
     <!-- PROJECT ARCHIVE -->
     <section class="card">
-      <h2>Project archive</h2>
+      <h2>Other projects</h2>
       <p class="muted">
         Smaller builds, experiments, and coursework projects.
       </p>
@@ -422,7 +425,7 @@
 
         <article class="archive-item">
           <h3>3D Print Utility Parts</h3>
-          <p class="muted">Functional modeling for real-world use (Fusion/Inventor workflow).</p>
+          <p class="muted">Functional modeling for real-world use using Fusion and 3D printing workflows.</p>
           <div class="project-tags">
             <span class="tag">3D Modeling</span><span class="tag">3D Printing</span>
           </div>

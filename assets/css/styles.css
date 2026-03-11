@@ -356,6 +356,23 @@ body {
   text-decoration: underline;
 }
 
+.link.disabled {
+  color: #94a3b8;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
+
+.link.disabled:hover {
+  text-decoration: none;
+}
+
+.link.disabled::after {
+  content: " (coming soon)";
+  font-weight: 400;
+  color: #94a3b8;
+}
+
 /* =========================================
    PROJECTS PAGE - LAYOUT
    ========================================= */
