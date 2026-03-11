@@ -8,7 +8,6 @@
 </head>
 
 <body>
-  <!-- Keep EXACT same mask -->
   <svg width="0" height="0" style="position:absolute">
     <defs>
       <mask id="tab-cut-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="60">
@@ -18,7 +17,6 @@
     </defs>
   </svg>
 
-  <!-- Header / Nav (unchanged) -->
   <header class="site-header">
     <div class="logo-area">
       <img class="logo" src="/assets/img/logo.png" alt="Marty Rasmussen logo" />
@@ -33,40 +31,43 @@
   </header>
 
   <main class="container">
-    <!-- PAGE HERO -->
+
+    <!-- HERO -->
     <section class="card hero">
       <p class="hero-kicker">Get in touch</p>
       <h1 class="hero-title">Contact</h1>
+
       <p class="hero-subtitle">
-        If you want to talk about a project, an internship/job opportunity, or anything related to
-        game dev, AR/VR, or hardware prototyping — feel free to reach out.
+        If you want to talk about a project, collaboration, internship, or job opportunity —
+        feel free to reach out. I'm especially interested in work related to game development,
+        AR/VR, interactive systems, and hardware-driven experiences.
       </p>
-      <br>
 
       <div class="hero-actions">
-        <!-- ✅ Real email -->
         <a class="btn primary" href="mailto:contact@martyrasmussen.com">Email me</a>
-
-        <!-- Optional: link to projects -->
         <a class="btn ghost" href="/projects/">View projects</a>
       </div>
     </section>
 
     <!-- CONTACT OPTIONS -->
     <section class="card">
-      <h2>Contact options</h2>
+      <h2>Where to reach me</h2>
+
       <div class="grid-2">
+
         <div class="mini-card">
           <h3>📧 Email</h3>
-          <p class="muted">Best for job opportunities and longer messages.</p>
+          <p class="muted">Best for job opportunities or longer messages.</p>
           <p>
-            <a class="link" href="mailto:contact@martyrasmussen.com">contact@martyrasmussen.com</a>
+            <a class="link" href="mailto:contact@martyrasmussen.com">
+              contact@martyrasmussen.com
+            </a>
           </p>
         </div>
 
         <div class="mini-card">
           <h3>💼 LinkedIn</h3>
-          <p class="muted">Best if you want a quick overview + messaging.</p>
+          <p class="muted">Professional profile and messaging.</p>
           <p>
             <a class="link"
                href="https://www.linkedin.com/in/martin-rasmussen-327739197/"
@@ -79,7 +80,7 @@
 
         <div class="mini-card">
           <h3>🐙 GitHub</h3>
-          <p class="muted">Repositories, code samples, and prototypes.</p>
+          <p class="muted">Code repositories and development projects.</p>
           <p>
             <a class="link"
                href="https://github.com/DragonBornESV"
@@ -91,30 +92,37 @@
         </div>
 
         <div class="mini-card">
-          <h3>📄 CV</h3>
-          <p class="muted">Optional: add a PDF link when you’re ready.</p>
-          <p class="muted">
-            Add later: <code>/assets/files/Marty_Rasmussen_CV.pdf</code>
+          <h3>📂 Portfolio</h3>
+          <p class="muted">Browse my development and hardware projects.</p>
+          <p>
+            <a class="link" href="/projects/">Open projects →</a>
           </p>
         </div>
+
       </div>
     </section>
 
-    <!-- SHORT NOTE -->
+    <!-- FINAL NOTE -->
     <section class="card">
-      <h2>What to include</h2>
-      <ul class="bullets">
-        <li>What you’re reaching out about (job/internship, collaboration, question, etc.)</li>
-        <li>Any relevant links (company page, project brief, GitHub, etc.)</li>
-        <li>Timeline (if there is one)</li>
-      </ul>
+      <h2>Thanks for visiting</h2>
+
+      <p>
+        This portfolio contains a selection of projects from my studies and personal work,
+        including game development, AR applications, robotics, and hardware prototypes.
+      </p>
+
+      <p>
+        If something here caught your interest, feel free to reach out — I'm always happy to
+        talk about projects, technology, or new opportunities.
+      </p>
+
       <p class="muted">
         I usually respond within a couple of days.
       </p>
     </section>
+
   </main>
 
-  <!-- Footer (unchanged) -->
   <footer class="container footer">
     <p>© <span id="year"></span> Martin Rasmussen</p>
   </footer>
@@ -122,5 +130,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
