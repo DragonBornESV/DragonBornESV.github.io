@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // =========================================================
-  // PROJECT FILTERS + SEARCH (works together)
+  // PROJECT FILTERS + SEARCH (UPDATED)
   // =========================================================
   const searchInput = document.getElementById("project-search");
   const filterButtons = document.querySelectorAll(".filter-row .chip[data-filter]");
@@ -39,28 +39,58 @@ document.addEventListener("DOMContentLoaded", () => {
   let activeFilter = "all";
   let query = "";
 
-  // Map "human" search terms to your internal tags
+  // 🔥 UPDATED alias map (includes your new project)
   const aliasMap = {
+    // AR / VR
     "augmented reality": "ar",
     "mixed reality": "ar",
     "mobile ar": "ar",
     "ar foundation": "ar",
-    "vr": "vr",
     "virtual reality": "vr",
     "oculus": "vr",
     "quest": "vr",
-    "hardware": "hardware",
+
+    // Game / Unity
+    "game dev": "game",
+    "game development": "game",
+    "unity": "unity",
+    "csharp": "c#",
+
+    // Hardware
     "arduino": "hardware",
     "robot": "hardware",
     "robotics": "hardware",
-    "3d": "3d",
+
+    // 3D
     "3d printing": "3d",
     "printing": "3d",
-    "game": "game",
-    "game dev": "game",
-    "unity": "unity",
-    "c#": "c#",
-    "csharp": "c#",
+
+    // 🔥 NEW: WEB / SOFTWARE
+    "web": "web",
+    "web dev": "web",
+    "web development": "web",
+    "software": "web",
+    "software development": "web",
+
+    // 🔥 TECH STACK
+    "react": "react",
+    "node": "node.js",
+    "nodejs": "node.js",
+    "mongodb": "mongodb",
+    "mongo": "mongodb",
+    "database": "mongodb",
+
+    // 🔥 FEATURES
+    "api": "api",
+    "rest": "api",
+    "map": "map",
+    "maps": "map",
+    "satellite": "satellite",
+    "satellites": "satellite",
+    "tracking": "tracking",
+    "tracker": "tracking",
+    "full stack": "full-stack",
+    "fullstack": "full-stack",
   };
 
   function norm(str) {
@@ -68,8 +98,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function tokenizeSearch(raw) {
-    // Split into words, remove empty, normalize, and expand aliases
-    const words = norm(raw)
+    const rawNorm = norm(raw);
+
+    const words = rawNorm
       .split(/[\s,]+/g)
       .map((w) => w.trim())
       .filter(Boolean);
@@ -78,11 +109,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     words.forEach((w) => {
       expanded.add(w);
-      // Expand known phrases/aliases
-      Object.keys(aliasMap).forEach((phrase) => {
-        if (phrase.includes(" ") && norm(raw).includes(phrase)) expanded.add(aliasMap[phrase]);
-      });
       if (aliasMap[w]) expanded.add(aliasMap[w]);
+    });
+
+    // Handle multi-word aliases (IMPORTANT FIX)
+    Object.keys(aliasMap).forEach((phrase) => {
+      if (phrase.includes(" ") && rawNorm.includes(phrase)) {
+        expanded.add(aliasMap[phrase]);
+      }
     });
 
     return Array.from(expanded);
@@ -91,21 +125,24 @@ document.addEventListener("DOMContentLoaded", () => {
   function buildHaystack(card) {
     const title = norm(card.querySelector(".project-title")?.textContent);
 
-    // description: take FIRST muted paragraph in the card body (not the page)
     const body = card.querySelector(".project-body");
     const desc = norm(body?.querySelector("p.muted")?.textContent);
 
-    // visible pill tags text
     const pillTags = norm(
       Array.from(card.querySelectorAll(".project-tags .tag"))
         .map((t) => t.textContent)
         .join(" ")
     );
 
-    // data-tags attribute (your canonical filter tags)
     const dataTags = norm(card.getAttribute("data-tags"));
 
-    return `${title} ${desc} ${pillTags} ${dataTags}`;
+    const meta = norm(
+      Array.from(card.querySelectorAll(".project-meta li"))
+        .map((li) => li.textContent)
+        .join(" ")
+    );
+
+    return `${title} ${desc} ${pillTags} ${dataTags} ${meta}`;
   }
 
   function matchesFilter(card) {
@@ -119,7 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const tokens = tokenizeSearch(query);
     const haystack = buildHaystack(card);
 
-    // AND logic: every token must match somewhere (feels more “correct”)
     return tokens.every((t) => haystack.includes(t));
   }
 
@@ -130,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Filter button clicks
+  // Filter buttons
   filterButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       activeFilter = btn.getAttribute("data-filter") || "all";
@@ -142,14 +178,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Search typing
+  // Search input
   if (searchInput) {
     searchInput.addEventListener("input", (e) => {
       query = e.target.value || "";
       applyAll();
     });
 
-    // Escape clears search quickly
     searchInput.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
         searchInput.value = "";
@@ -159,12 +194,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Default render
   applyAll();
 });
 
 // =========================================================
-// GALLERY LIGHTBOX
+// GALLERY LIGHTBOX (unchanged)
 // =========================================================
 document.addEventListener("DOMContentLoaded", () => {
   const galleryImages = Array.from(document.querySelectorAll(".lightbox-gallery img"));

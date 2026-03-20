@@ -36,14 +36,16 @@
       <p class="hero-kicker">Selected work • Prototypes • Finished projects</p>
       <h1 class="hero-title">Projects</h1>
       <p class="hero-subtitle">
-        A collection of my work across <strong>game development</strong>, <strong>AR/VR</strong>, and
-        <strong>hardware prototyping</strong>. This page is meant as an overview, while the individual
-        project pages will go into more depth with process, challenges, and technical details.
+        A collection of my work across <strong>game development</strong>, <strong>AR/VR</strong>,
+        <strong>web development</strong>, and <strong>hardware prototyping</strong>. This page is meant
+        as an overview, while the individual project pages will go into more depth with process,
+        challenges, and technical details.
       </p>
 
       <div class="hero-tags" aria-label="Quick filters">
         <span class="tag">Unity / C#</span>
         <span class="tag">AR & VR</span>
+        <span class="tag">Web / APIs</span>
         <span class="tag">Arduino</span>
         <span class="tag">3D Modeling</span>
         <span class="tag">3D Printing</span>
@@ -54,7 +56,7 @@
     <section class="card">
       <h2>Find a project</h2>
       <p class="muted">
-        Search by keywords (Unity, AR, VR, Arduino…) or use the category buttons to filter the list.
+        Search by keywords (Unity, AR, VR, React, API, Arduino…) or use the category buttons to filter the list.
       </p>
 
       <div class="project-controls">
@@ -63,7 +65,7 @@
           id="project-search"
           class="input"
           type="search"
-          placeholder="Search (e.g., AR, Unity, Arduino, VR...)"
+          placeholder="Search (e.g., AR, Unity, React, API, Arduino...)"
           autocomplete="off"
         />
 
@@ -72,6 +74,7 @@
           <button class="chip" type="button" data-filter="game">Game Dev</button>
           <button class="chip" type="button" data-filter="ar">AR</button>
           <button class="chip" type="button" data-filter="vr">VR</button>
+          <button class="chip" type="button" data-filter="web">Web / Software</button>
           <button class="chip" type="button" data-filter="hardware">Hardware</button>
           <button class="chip" type="button" data-filter="3d">3D / Printing</button>
         </div>
@@ -83,28 +86,25 @@
       <h2>Highlighted projects</h2>
       <p class="muted">
         These projects represent my most substantial work — including course projects and my bachelor project.
-        Each one shows how I design, implement, iterate, and reflect across game dev, AR/VR, and hardware systems.
+        Each one shows how I design, implement, iterate, and reflect across game dev, AR/VR, software, and hardware systems.
       </p>
 
       <div class="projects-grid">
 
         <!-- Project: AR Density Learning App (Bachelor) -->
-        <article class="project-tile" data-tags="ar unity">
+        <article class="project-tile" data-tags="ar unity mobile app education learning c# arfoundation">
           <div class="project-thumb carousel">
             <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
-
             <div class="carousel-track">
               <img src="/assets/img/projects/ar-density-ba-01.jpg" alt="Bachelor AR Density app: tracked marker with scaled material cube" class="carousel-img is-active">
               <img src="/assets/img/projects/ar-density-ba-02.jpg" alt="Bachelor AR Density app: material selection and info UI" class="carousel-img">
               <img src="/assets/img/projects/ar-density-ba-03.jpg" alt="Bachelor AR Density app: comparing materials and density-to-volume effect" class="carousel-img">
             </div>
-
             <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
           </div>
 
           <div class="project-body">
             <h3 class="project-title">AR Density Learning App (Bachelor Project)</h3>
-
             <p class="muted">
               A mobile AR learning application that helps students understand the relationship between
               <strong>mass, volume, and density</strong> by visualizing materials as a scaled 3D object in the real world.
@@ -136,22 +136,19 @@
         </article>
 
         <!-- Project: AR Density Learning App (Course Project) -->
-        <article class="project-tile" data-tags="ar unity">
+        <article class="project-tile" data-tags="ar unity mobile app education learning c# image tracking">
           <div class="project-thumb carousel">
             <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
-
             <div class="carousel-track">
               <img src="/assets/img/projects/ar-density-1.jpg" alt="AR Density app: cube overlay on tracked milk carton" class="carousel-img is-active">
               <img src="/assets/img/projects/ar-density-2.jpg" alt="AR Density app: material selection menu" class="carousel-img">
               <img src="/assets/img/projects/ar-density-3.jpg" alt="AR Density app: different material cube size comparison" class="carousel-img">
             </div>
-
             <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
           </div>
 
           <div class="project-body">
             <h3 class="project-title">AR Density Learning App (Course Project)</h3>
-
             <p class="muted">
               Mobile AR learning tool that visualizes how <strong>the same mass</strong> can have
               <strong>different volumes</strong> depending on material density by placing a resizable,
@@ -176,28 +173,25 @@
             <div class="project-links">
               <a class="link" href="/projects/ar-density-course/index.html">Project details →</a>
               <span class="dot">•</span>
-              <a class="link" href="https://youtu.be/ftPs4txSZrY">Video →</a>
+              <a class="link" href="https://youtu.be/ftPs4txSZrY" target="_blank" rel="noopener">Video →</a>
             </div>
           </div>
         </article>
 
         <!-- Project: VR Organ Explorer -->
-        <article class="project-tile" data-tags="vr unity">
+        <article class="project-tile" data-tags="vr unity medical education immersive c# quest anatomy">
           <div class="project-thumb carousel">
             <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
-
             <div class="carousel-track">
               <img src="/assets/img/projects/vr-organs-1.jpg" alt="VR organ interaction scene" class="carousel-img is-active">
               <img src="/assets/img/projects/vr-organs-2.jpg" alt="Organ selection menu in VR" class="carousel-img">
               <img src="/assets/img/projects/vr-organs-3.jpg" alt="Anatomy information panel in VR" class="carousel-img">
             </div>
-
             <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
           </div>
 
           <div class="project-body">
             <h3 class="project-title">VR Organ Explorer</h3>
-
             <p class="muted">
               VR learning application designed to help medical students explore human anatomy
               through interactive 3D organ models in an immersive, low-stress environment.
@@ -227,22 +221,19 @@
         </article>
 
         <!-- Project: Poltergeist Pursuers -->
-        <article class="project-tile" data-tags="ar game hardware unity">
+        <article class="project-tile" data-tags="ar game hardware unity controller arduino prototype gameplay">
           <div class="project-thumb carousel">
             <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
-
             <div class="carousel-track">
               <img src="/assets/img/projects/poltergeist-1.jpg" alt="Poltergeist Pursuers AR gameplay" class="carousel-img is-active">
               <img src="/assets/img/projects/poltergeist-2.jpg" alt="3D-printed AR controller prototype" class="carousel-img">
               <img src="/assets/img/projects/poltergeist-3.jpg" alt="Controller sketch and UI concepts" class="carousel-img">
             </div>
-
             <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
           </div>
 
           <div class="project-body">
             <h3 class="project-title">Poltergeist Pursuers (AR Game + Custom Controller)</h3>
-
             <p class="muted">
               Mobile AR game prototype focused on physical movement and immersion,
               using a custom-built controller to detect and capture ghosts in the real world.
@@ -271,22 +262,19 @@
         </article>
 
         <!-- Project: Racing wheel -->
-        <article class="project-tile" data-tags="hardware game unity">
+        <article class="project-tile" data-tags="hardware game unity arduino serial leds controller real-time">
           <div class="project-thumb carousel">
             <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
-
             <div class="carousel-track">
               <img src="/assets/img/projects/racing-wheel-1.jpg" alt="Racing wheel prototype with LED rev strip" class="carousel-img is-active">
               <img src="/assets/img/projects/racing-wheel-2.jpg" alt="Arduino and wiring setup for the racing wheel system" class="carousel-img">
               <img src="/assets/img/projects/racing-wheel-3.jpg" alt="Unity UI showing wheel angle, gear, revs, and speed" class="carousel-img">
             </div>
-
             <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
           </div>
 
           <div class="project-body">
             <h3 class="project-title">Interactive Racing Wheel System</h3>
-
             <p class="muted">
               Arduino-based racing wheel prototype with steering input, paddle shifting,
               and LED rev feedback connected to Unity for live wheel angle, gear, revs, and speed display.
@@ -315,22 +303,19 @@
         </article>
 
         <!-- Project: Omnidirectional robot -->
-        <article class="project-tile" data-tags="hardware 3d">
+        <article class="project-tile" data-tags="hardware robotics 3d arduino wifi http mecanum robot fusion">
           <div class="project-thumb carousel">
             <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
-
             <div class="carousel-track">
               <img src="/assets/img/projects/mecanum-robot-1.jpg" alt="Omnidirectional robot with mecanum wheels (front view)" class="carousel-img is-active">
               <img src="/assets/img/projects/mecanum-robot-2.jpg" alt="Omnidirectional robot with OLED eyes display (close view)" class="carousel-img">
               <img src="/assets/img/projects/mecanum-robot-3.jpg" alt="Omnidirectional robot (side/top view)" class="carousel-img">
             </div>
-
             <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
           </div>
 
           <div class="project-body">
             <h3 class="project-title">Wi-Fi-Controlled Omnidirectional Robot (Mecanum Wheels)</h3>
-
             <p class="muted">
               A 3D-printed mecanum-wheel robot controlled from a browser over Wi-Fi,
               with an OLED “eyes” display that reacts to movement commands.
@@ -359,23 +344,62 @@
           </div>
         </article>
 
-        <!-- Project: Library Of Alexandria -->
-        <article class="project-tile" data-tags="game unity">
+        <!-- Project: Live Satellite Tracker -->
+        <article class="project-tile" data-tags="web software react node mongodb api map tracking satellite full-stack javascript">
           <div class="project-thumb carousel">
             <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
+            <div class="carousel-track">
+              <img src="/assets/img/projects/satellite-tracker-1.jpg" alt="Live Satellite Tracker map interface showing real-time satellite positions" class="carousel-img is-active">
+              <img src="/assets/img/projects/satellite-tracker-2.jpg" alt="Live Satellite Tracker data table with satellite details and timestamps" class="carousel-img">
+              <img src="/assets/img/projects/satellite-tracker-3.jpg" alt="Live Satellite Tracker combined interface with map and satellite information" class="carousel-img">
+            </div>
+            <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
+          </div>
 
+          <div class="project-body">
+            <h3 class="project-title">Live Satellite Tracker</h3>
+            <p class="muted">
+              A full-stack web application that tracks selected satellites in real time using the N2YO API,
+              displaying live positions on a map together with detailed satellite data stored through MongoDB.
+            </p>
+
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">API</span>
+              <span class="tag">Maps</span>
+            </div>
+
+            <ul class="project-meta">
+              <li><strong>Role:</strong> Solo</li>
+              <li><strong>Year:</strong> 2024</li>
+              <li><strong>Course:</strong> Web Programming 2</li>
+              <li><strong>Focus:</strong> Live API data, map visualization, full-stack integration, database storage</li>
+            </ul>
+
+            <div class="project-links">
+              <a class="link" href="/projects/live-satellite-tracker/index.html">Project details →</a>
+              <span class="dot">•</span>
+              <a class="link" href="https://youtu.be/J5s3kruMn-U" target="_blank" rel="noopener">Video →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project: Library Of Alexandria -->
+        <article class="project-tile" data-tags="game unity procedural narrative 2d roguelike dialogue">
+          <div class="project-thumb carousel">
+            <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
             <div class="carousel-track">
               <img src="/assets/img/projects/library-alexandria-1.jpg" alt="The Library of Alexandria – gameplay screenshot" class="carousel-img is-active">
               <img src="/assets/img/projects/library-alexandria-2.jpg" alt="The Library of Alexandria – level or environment screenshot" class="carousel-img">
               <img src="/assets/img/projects/library-alexandria-3.jpg" alt="The Library of Alexandria – concept art or poster" class="carousel-img">
             </div>
-
             <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
           </div>
 
           <div class="project-body">
             <h3 class="project-title">The Library of Alexandria</h3>
-
             <p class="muted">
               A story-driven 2D game prototype with roguelike structure, dialogue, and a perk-based progression system
               where collected books change the player’s abilities.

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Live Satellite Tracker | Marty Rasmussen</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+
+<body>
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <mask id="tab-cut-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="60">
+        <rect x="0" y="0" width="200" height="60" fill="black"></rect>
+        <circle cx="40" cy="30" r="60" fill="white"></circle>
+      </mask>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <div class="logo-area">
+      <img class="logo" src="/assets/img/logo.png" alt="Marty Rasmussen logo" />
+    </div>
+
+    <nav class="nav-bar">
+      <a class="nav-btn" href="/">Home</a>
+      <a class="nav-btn is-current" href="/projects/" aria-current="page">Projects</a>
+      <a class="nav-btn" href="/about/">About</a>
+      <a class="nav-btn" href="/contact/">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="card hero project-detail-hero">
+      <p class="hero-kicker">Project detail • Web Development / Full-Stack • 2024</p>
+      <h1 class="hero-title">Live Satellite Tracker</h1>
+
+      <p class="hero-tagline">
+        A full-stack web application that tracks selected satellites in real time using the N2YO API,
+        displaying live positions on an interactive map together with detailed satellite data stored through MongoDB.
+      </p>
+
+      <div class="hero-tags" aria-label="Project technologies">
+        <span class="tag">React</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">MongoDB</span>
+        <span class="tag">N2YO API</span>
+        <span class="tag">Leaflet Maps</span>
+        <span class="tag">Full-Stack</span>
+      </div>
+
+      <ul class="project-meta detail-meta">
+        <li><strong>Role:</strong> Solo</li>
+        <li><strong>Year:</strong> 2024</li>
+        <li><strong>Course:</strong> Web Programming 2</li>
+        <li><strong>Focus:</strong> Live API data, map visualization, full-stack integration, and database storage</li>
+      </ul>
+
+      <div class="project-links">
+        <a class="link" href="https://www.youtube.com/watch?v=J5s3kruMn-U" target="_blank" rel="noopener">Video →</a>
+        <span class="dot">•</span>
+        <a class="link" href="/projects/">Back to projects →</a>
+      </div>
+    </section>
+
+    <!-- PROJECT SUMMARY -->
+    <section class="card">
+      <h2>Project summary</h2>
+      <p>
+        This project was built as a live satellite tracking application that combines a React frontend,
+        a Node.js backend, and a MongoDB database. The goal was to create a web app that could fetch
+        real-time satellite positions from the N2YO API and present them in a clear and interactive way.
+      </p>
+      <p>
+        The final result displays selected satellites on an interactive map while also showing detailed
+        information such as satellite ID, name, latitude, longitude, and timestamps in a structured table.
+        In addition to live tracking, the application stores satellite data through MongoDB, making it a
+        practical exercise in full-stack web development and API integration.
+      </p>
+    </section>
+
+    <!-- MAIN MEDIA -->
+    <section class="card">
+      <h2>Main media</h2>
+
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/J5s3kruMn-U"
+          title="Live Satellite Tracker video"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="card">
+    <h2>Gallery</h2>
+
+    <div class="detail-gallery lightbox-gallery">
+        <figure class="detail-gallery-item">
+        <img
+            src="/assets/img/projects/satellite-tracker-1.jpg"
+            alt="World map overview with multiple tracked satellites and a live data table"
+            data-caption="Full world view of the application showing multiple tracked satellites at once, with the live data table displayed alongside the map.">
+        <figcaption class="muted">Full world view of the application showing multiple tracked satellites at once, with the live data table displayed alongside the map.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+        <img
+            src="/assets/img/projects/satellite-tracker-2.jpg"
+            alt="Selected satellite marker with popup information on the map"
+            data-caption="Example of a selected satellite on the map, where the interface shows a popup with coordinate details while the matching entry remains visible in the data table.">
+        <figcaption class="muted">Example of a selected satellite on the map, where the interface shows a popup with coordinate details while the matching entry remains visible in the data table.</figcaption>
+        </figure>
+
+        <figure class="detail-gallery-item">
+        <img
+            src="/assets/img/projects/satellite-tracker-3.jpg"
+            alt="Regional map view of the satellite tracker focused on a selected satellite position"
+            data-caption="Regional zoomed-in map view showing one tracked satellite in more detail, including its plotted path and current position label.">
+        <figcaption class="muted">Regional zoomed-in map view showing one tracked satellite in more detail, including its plotted path and current position label.</figcaption>
+        </figure>
+    </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="card">
+      <h2>Overview</h2>
+      <p>
+        The Live Satellite Tracker is a web-based application designed to monitor the real-time
+        location of selected satellites. The system uses the N2YO API to fetch live satellite data
+        and presents the information in a visual and accessible format through an interactive map and a supporting
+        data table.
+      </p>
+      <p>
+        The application was structured as a full-stack project with a React client, a Node.js server,
+        and MongoDB for data storage. This made it possible not only to display live satellite positions,
+        but also to organize and manage the data in a more persistent way than a purely frontend-based solution.
+      </p>
+    </section>
+
+    <!-- MY ROLE -->
+    <section class="card">
+      <h2>My role</h2>
+      <p>
+        This was a solo project, so I was responsible for both the frontend and backend parts of the
+        application, as well as the API integration and database setup.
+      </p>
+
+      <ul class="bullets">
+        <li>Built the frontend in React for map-based visualization and table-based satellite data display</li>
+        <li>Developed the backend in Node.js to handle API requests and data flow</li>
+        <li>Integrated the N2YO API for live satellite tracking</li>
+        <li>Set up MongoDB for storing satellite-related data</li>
+        <li>Structured the application so the client and server could be started together through a project start script</li>
+      </ul>
+    </section>
+
+    <!-- PROCESS / DEVELOPMENT -->
+    <section class="card">
+      <h2>Process and development</h2>
+      <p>
+        The project was developed as a combination of frontend visualization and backend data handling.
+        On the frontend side, the focus was on presenting live satellite positions clearly through a map
+        while keeping the supporting table readable and informative. On the backend side, the goal
+        was to fetch data from the N2YO API, process it, and make it available to the client in a usable form.
+      </p>
+      <p>
+        React was used to manage the user interface, while Node.js handled the server logic and communication
+        with the external API. MongoDB was added to support data storage, which made the project broader than
+        just a live API demo and turned it into a more complete full-stack exercise.
+      </p>
+      <p>
+        The final interface made it possible to view satellite positions at different map scales, from a global
+        overview down to more local map detail, while still keeping the relevant satellite information visible in
+        the table beside the map.
+      </p>
+    </section>
+
+    <!-- CHALLENGES -->
+    <section class="card">
+      <h2>Challenges and solutions</h2>
+      <div class="grid-2">
+        <div class="mini-card">
+          <h3>Challenge</h3>
+          <p>
+            One of the main challenges was combining live external API data with a responsive frontend
+            and a stable backend flow. Real-time position data needs to be requested, processed, and
+            displayed clearly without making the interface confusing or overloaded.
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3>Solution</h3>
+          <p>
+            I addressed this by separating the project into a clear frontend and backend structure.
+            The backend handled the API requests and data management, while the frontend focused on
+            map-based visualization and readable tabular output. This made the application easier to
+            develop, debug, and extend.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTCOME / REFLECTION -->
+    <section class="card">
+      <h2>Outcome and reflection</h2>
+      <p>
+        The final result was a working satellite tracking web application that successfully combined
+        live API data, frontend visualization, backend logic, and database storage. It demonstrated how
+        a real-time external data source can be integrated into a full-stack application with both
+        technical and visual components.
+      </p>
+      <p>
+        The project was especially valuable as practice in coordinating multiple technologies at once:
+        React for the interface, Node.js for server-side logic, MongoDB for storage, and an external API
+        for live data. It was a good example of building something that is both technically structured and
+        visually useful.
+      </p>
+      <p class="muted">
+        Looking back, natural next steps would be to expand the application with more filtering,
+        additional satellite categories, historical orbit paths, or richer interaction on the map.
+        Even in its current form, though, it works well as a solid full-stack tracking prototype.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="card cta">
+      <h2>Want to see more?</h2>
+      <p class="muted">
+        You can go back to the projects overview or get in touch if you want to know more about this project.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="/projects/">Back to projects</a>
+        <a class="btn ghost" href="/contact/">Contact</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop"></div>
+
+    <div class="lightbox-content" role="dialog" aria-modal="true" aria-label="Expanded gallery image">
+      <button class="lightbox-close" type="button" aria-label="Close gallery">✕</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">‹</button>
+
+      <figure class="lightbox-figure">
+        <img id="lightbox-image" src="" alt="">
+        <figcaption id="lightbox-caption"></figcaption>
+      </figure>
+
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Previous image">›</button>
+    </div>
+  </div>
+
+  <footer class="container footer">
+    <p>© <span id="year"></span> Martin Rasmussen</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
